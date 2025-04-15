@@ -1,0 +1,72 @@
+body,
+html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/header.jpg");
+  min-height: 75%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+}
+
+.menu {
+  display: none;
+}
+
+/* Custom styles to override W3.CSS */
+.w3-text-grey {
+  color: #757575 !important; /* A different shade of grey */
+}
+
+.w3-text-grey-italic {
+  color: #757575 !important; /* A different shade of grey */
+  font-style: italic;
+}
+
+.w3-button {
+  transition: all 0.3s ease;
+}
+
+.w3-button:hover {
+  background-color: #333 !important;
+}
+
+.w3-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+  padding: 2rem 0;
+}
+
+footer .copyright {
+  margin-bottom: 1rem;
+  font-size: 0.9em;
+  color: #666;
+}
+
+footer .social-icons {
+  margin-top: 1rem;
+}
+
+footer .fa {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 8px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #4caf50;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+          <a href="#" class="w3-button w3-block w3-black">HOME</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#menu" class="w3-button w3-block w3-black">DOWNLOAD</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#where" class="w3-button w3-block w3-black">CONTACT</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+      <div
+        class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small"
+      >
+        <span class="w3-tag"
+          >LuminArch: Sunlight Simulation Game for Architects</span
+        >
+      </div>
+      <div class="w3-display-middle w3-center">
+        <span class="w3-text-white" style="font-size: 90px">LuminArch</span>
+      </div>
+      <div class="w3-display-bottomright w3-center w3-padding-large">
+        <span class="w3-text-white">Istanbul Technical University</span>
+      </div>
+    </header>
+
+    <!-- Begin main content wrapper -->
+    <div class="w3-sand w3-grayscale w3-large">
+      <!-- About Container -->
+      <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-64">
+            <span class="w3-tag w3-wide">About The LuminArch</span>
+          </h5>
+          <p>
+            LuminArch is a single-player architectural design game where
+            creativity meets science. Players design simple structures using
+            walls, windows, and sunshades—then see how their choices affect
+            sunlight, glare, and shadow in real-time. Once the design is
+            complete, our simulation system scores their building's daylight
+            performance using real-world sun data.
+          </p>
+          <p>
+            Built for architecture students and enthusiasts, LuminArch turns
+            daylight design into an engaging and educational challenge.
+          </p>
+          <div class="w3-panel w3-leftbar w3-light-grey">
+            <p>
+              <i
+                >LuminArch is a serious game designed and developed by Varlık
+                Yücel as part of his PhD thesis, under the supervision of Assoc.
+                Prof. Dr. Sema Alaçam at Istanbul Technical University's
+                Architectural Design Computing Program.</i
+              >
+            </p>
+          </div>
+          <!-- 
+          <img
+            src="/w3images/coffeeshop.jpg"
+            style="width: 100%; max-width: 1000px"
+            class="w3-margin-top"
+            alt="Coffee Shop"
+          />
+          <p><strong>Expert:</strong> everyday from 6am to 5pm.</p>
+          <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+          -->
+        </div>
+      </div>
+
+      <!-- Download Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-48">
+            <span class="w3-tag w3-wide">Download The Game</span>
+          </h5>
+
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Game');"
+              id="myLink"
+            >
+              <div class="w3-col s6 tablink">Game</div>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Additional');"
+            >
+              <div class="w3-col s6 tablink">Additional</div>
+            </a>
+          </div>
+
+          <div id="Game" class="w3-container menu w3-padding-48 w3-card">
+            <h5>LuminArch v.1.0 - Windows x64</h5>
+            <p class="w3-text-grey">
+              Please click download button below to download the game.
+            </p>
+            <br />
+            <a
+              href="https://drive.google.com/file/d/1-_0000000000000000000000000000000000000000/view?usp=sharing"
+              >Download</a
+            >
+            <br />
+            <br />
+            <p class="w3-text-grey-italic">
+              *If you experience any issues running the game, please download
+              and install the Microsoft Visual StudioRedistributable from the
+              "additional" section.
+            </p>
+          </div>
+
+          <div id="Additional" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Microsoft Visual C++ 2015-2022 Redistributable (x64)</h5>
+            <p class="w3-text-grey">
+              VC_redist.x64.exe is a software package developed by Microsoft
+              Corporation that provides essential runtime components for running
+              applications developed with Visual C++.
+            </p>
+            <br />
+            <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe"
+              >Download</a
+            >
+            <br />
+            <br />
+            <p class="w3-text-grey-italic">
+              *If you still experience any issues running the game, please
+              contact me directly
+              <a href="mailto:varlik.yucel@gmail.com">here</a> or use the
+              contact form below.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Container -->
+      <div class="w3-container" id="where" style="padding-bottom: 32px">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-48">
+            <span class="w3-tag w3-wide">Contact Us</span>
+          </h5>
+
+          <p>
+            <span class="w3-tag">FYI!</span> If you have any questions,
+            feedback, or encounter any issues while downloading or playing the
+            game, please don't hesitate to reach out. Whether it's a technical
+            problem, a bug report, or simply a suggestion, your input is greatly
+            appreciated and helps improve the overall experience.
+          </p>
+          <p>
+            <strong>Fill out the form below,</strong> and I'll get back to you
+            as soon as possible!
+          </p>
+          <form action="https://formspree.io/f/xkgjeqwd" method="POST">
+            <p>
+              <input
+                class="w3-input w3-padding-16 w3-border"
+                type="text"
+                placeholder="Name"
+                required
+                name="name"
+              />
+            </p>
+            <p>
+              <input
+                class="w3-input w3-padding-16 w3-border"
+                type="email"
+                placeholder="Email"
+                required
+                name="email"
+              />
+            </p>
+            <p>
+              <input
+                class="w3-input w3-padding-16 w3-border"
+                type="text"
+                placeholder="Subject"
+                required
+                name="subject"
+              />
+            </p>
+            <p>
+              <textarea
+                class="w3-input w3-padding-16 w3-border"
+                placeholder="Message"
+                required
+                name="message"
+                style="height: 150px"
+              ></textarea>
+            </p>
+            <p>
+              <button class="w3-button w3-black" type="submit">
+                SEND MESSAGE
+              </button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-large">
+      <div class="copyright">
+        <span>Varlık Yücel</span>
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span>All Rights Reserved</span>
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span>© 2025</span>
+      </div>
+      <div class="social-icons">
+        <a
+          href="https://varlikyucel.com"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-globe"></i>
+        </a>
+        <a
+          href="https://github.com/varlikyucel"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+        <a
+          href="https://linkedin.com/in/varlikyucel"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a
+          href="https://behance.net/varlikyucel"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-behance"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // Tabbed Menu
+      function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " w3-dark-grey",
+            ""
+          );
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+      }
+      document.getElementById("myLink").click();
+    </script>
+  </body>
+</html>
