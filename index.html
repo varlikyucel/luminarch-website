@@ -139,7 +139,7 @@
           </div>
 
           <div id="Game" class="w3-container menu w3-padding-48 w3-card">
-            <h5>LuminArch v.1.0 - Windows x64</h5>
+            <h5>LuminArch Installer v.1.0 - Windows x64</h5>
             <p class="w3-text-grey">
               Please click download button below to download the game.
             </p>
@@ -249,7 +249,7 @@
         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span>All Rights Reserved</span>
         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span>© 2025</span>
+        <span>© <span id="current-year"></span></span>
       </div>
       <div class="social-icons">
         <a
@@ -302,6 +302,10 @@
         evt.currentTarget.firstElementChild.className += " w3-dark-grey";
       }
       document.getElementById("myLink").click();
+
+      // Set current year in footer
+      document.getElementById("current-year").innerHTML =
+        new Date().getFullYear();
     </script>
   </body>
 </html>

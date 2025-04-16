@@ -200,7 +200,7 @@
         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span>All Rights Reserved</span>
         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span>© 2025</span>
+        <span>© <span id="current-year"></span></span>
       </div>
       <div class="social-icons">
         <a
@@ -308,6 +308,10 @@
               alert("An error occurred. Please try again later.");
             });
         });
+
+      // Set current year in footer
+      document.getElementById("current-year").innerHTML =
+        new Date().getFullYear();
     </script>
   </body>
 </html>
