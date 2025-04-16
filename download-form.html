@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LuminArch Download Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .page-container {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px; /* Space for the fixed navbar */
+      }
+      .main-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+      footer {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+          <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="index.html#about" class="w3-button w3-block w3-black"
+            >ABOUT</a
+          >
+        </div>
+        <div class="w3-col s3">
+          <a href="index.html#menu" class="w3-button w3-block w3-black"
+            >DOWNLOAD</a
+          >
+        </div>
+        <div class="w3-col s3">
+          <a href="index.html#where" class="w3-button w3-block w3-black"
+            >CONTACT</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Container -->
+    <div class="page-container w3-sand w3-grayscale w3-large">
+      <!-- Main content -->
+      <div class="main-content">
+        <div class="w3-container w3-padding-16 w3-center" style="width: 100%">
+          <div class="w3-content" style="max-width: 700px">
+            <h5 class="w3-center w3-padding-32">
+              <span class="w3-tag w3-wide">Complete Your Download</span>
+            </h5>
+
+            <div id="form-intro" class="w3-panel w3-leftbar w3-light-grey">
+              <p>
+                <i
+                  >Please fill out this quick form to receive your download link
+                  and installation password.</i
+                >
+              </p>
+            </div>
+
+            <!-- Form Section -->
+            <div id="download-form-container">
+              <form
+                id="download-form"
+                class="w3-container w3-card-4 w3-padding-16"
+              >
+                <p>
+                  <input
+                    class="w3-input w3-padding-16 w3-border"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                  />
+                </p>
+                <p>
+                  <input
+                    class="w3-input w3-padding-16 w3-border"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                  />
+                </p>
+                <p>
+                  <input
+                    class="w3-input w3-padding-16 w3-border"
+                    type="text"
+                    id="affiliation"
+                    name="affiliation"
+                    placeholder="School/Company"
+                    required
+                  />
+                </p>
+                <p>
+                  <button
+                    id="submit-btn"
+                    class="w3-button w3-black"
+                    type="submit"
+                  >
+                    Submit & Download
+                  </button>
+                </p>
+              </form>
+            </div>
+
+            <!-- Success Section (initially hidden) -->
+            <div
+              id="download-success"
+              class="w3-container w3-card-4 w3-padding-16"
+              style="display: none"
+            >
+              <h4 class="w3-center">
+                Thank you for your interest in LuminArch!
+              </h4>
+              <p>
+                Your download should begin automatically. If it doesn't,
+                <a
+                  id="direct-download-link"
+                  href="https://github.com/varlikyucel/luminarch-website/releases/download/LuminArch-Release/LuminArch.Setup.exe"
+                  >click here</a
+                >
+                to download manually.
+              </p>
+
+              <div class="w3-panel w3-leftbar w3-light-grey">
+                <p>
+                  <i
+                    >Important: When prompted during installation, please use
+                    the following password:</i
+                  >
+                </p>
+                <h3 class="w3-center">ITU2025LA</h3>
+              </div>
+
+              <p class="w3-center">
+                <a href="index.html" class="w3-button w3-black"
+                  >Return to Homepage</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-large w3-padding-16">
+      <div class="copyright">
+        <span>Varlık Yücel</span>
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span>All Rights Reserved</span>
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span>© 2025</span>
+      </div>
+      <div class="social-icons">
+        <a
+          href="https://varlik.myportfolio.com/"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-globe"></i>
+        </a>
+        <a
+          href="https://github.com/varlikyucel"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-github"></i>
+        </a>
+        <a
+          href="https://linkedin.com/in/varlikyucel"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a
+          href="https://behance.net/varlikyucel"
+          target="_blank"
+          class="w3-hover-text-green"
+        >
+          <i class="fa fa-behance"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // Form submission handler
+      document
+        .getElementById("download-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const affiliation = document
+            .getElementById("affiliation")
+            .value.trim();
+
+          // Validate form fields
+          if (!name || !email || !affiliation) {
+            alert("Please fill out all fields");
+            return;
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address");
+            return;
+          }
+
+          // Create form data for submission to Formspree
+          const formData = new FormData();
+          formData.append("name", name);
+          formData.append("email", email);
+          formData.append("affiliation", affiliation);
+
+          // Submit the form data to Formspree
+          fetch("https://formspree.io/f/xkgjeqwd", {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                // Show success message
+                document.getElementById(
+                  "download-form-container"
+                ).style.display = "none";
+                document.getElementById("download-success").style.display =
+                  "block";
+                document.getElementById("form-intro").style.display = "none";
+
+                // Start download automatically after a short delay
+                setTimeout(function () {
+                  window.location.href =
+                    "https://github.com/varlikyucel/luminarch-website/releases/download/LuminArch-Release/LuminArch.Setup.exe";
+                }, 1500);
+              } else {
+                response.json().then((data) => {
+                  if (Object.hasOwn(data, "errors")) {
+                    alert(
+                      data["errors"].map((error) => error["message"]).join(", ")
+                    );
+                  } else {
+                    alert("Oops! There was a problem submitting your form");
+                  }
+                });
+              }
+            })
+            .catch((error) => {
+              // Handle any errors
+              console.error("Error:", error);
+              alert("An error occurred. Please try again later.");
+            });
+        });
+    </script>
+  </body>
+</html>
