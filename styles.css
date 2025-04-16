@@ -10,7 +10,7 @@ html {
   background-image: url("images/header.jpg");
   min-height: 75%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: overlay;
 }
 
