@@ -2,6 +2,8 @@
 
 This repository contains the website for LuminArch, a serious game for architects.
 
+https://varlikyucel.github.io/luminarch-website/
+
 ## Download Form Implementation
 
 The website includes a user registration system for downloads. When users click the download button, they are directed to a form where they need to provide:
