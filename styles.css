@@ -104,3 +104,35 @@ footer a {
 footer a:hover {
   color: #4caf50;
 }
+
+/* Promo video container styles */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1; /* Ensure it's above any potential overlays */
+  background: transparent;
+}
+
+.responsive-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover to maintain aspect ratio without cropping */
+  z-index: 2; /* Place video above container background */
+  filter: none; /* Explicitly remove any filters */
+  mix-blend-mode: normal; /* Prevent any blending effects */
+  background-blend-mode: normal;
+}
+
+@media only screen and (max-width: 600px) {
+  .video-container {
+    padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+  }
+}

@@ -135,7 +135,79 @@
           -->
         </div>
       </div>
+    </div>
 
+    <!-- Promo Video Container - OUTSIDE OF GRAYSCALE WRAPPER -->
+    <div class="w3-container" id="promo-video" style="position: relative; background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%); padding: 2rem 0; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0;">
+      <div class="w3-content" style="max-width: 800px">
+        <h5 class="w3-center" style="margin-bottom: 30px;">
+          <span class="w3-tag w3-wide" style="background-color: #333; padding: 8px 16px; letter-spacing: 1px;">Watch LuminArch in Action</span>
+        </h5>
+        
+        <div style="width: 100%; max-width: 800px; margin: 0 auto;">
+          <div class="video-wrapper" style="width: 100%; padding-bottom: 56.25%; position: relative; margin-bottom: 1rem; border-radius: 8px; overflow: hidden; box-shadow: 0 12px 24px rgba(0,0,0,0.15);">
+            <!-- Custom Play Button Overlay -->
+            <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 2; background: rgba(0,0,0,0.2); transition: all 0.3s ease;">
+              <div class="play-button" style="width: 90px; height: 90px; background-color: rgba(255,255,255,0.9); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 30px rgba(0,0,0,0.4); transition: transform 0.2s ease;">
+                <div style="width: 0; height: 0; border-style: solid; border-width: 20px 0 20px 32px; border-color: transparent transparent transparent #333; margin-left: 10px;"></div>
+              </div>
+            </div>
+            
+            <!-- Custom Thumbnail Image -->
+            <img class="video-thumbnail" src="images/header.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+            
+            <!-- Video Element (Initially Hidden) -->
+            <video 
+              id="promo-video-player"
+              controls 
+              preload="metadata"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; z-index: 0; opacity: 0; transition: opacity 0.3s ease;"
+            >
+              <source src="videos/LuminArch-promo-01.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          <!-- Video Caption -->
+          <p style="text-align: center; margin-top: 10px; color: #555; font-style: italic; font-size: 0.9em;">
+            Experience the innovative gameplay that combines architectural design with daylight simulation
+          </p>
+        </div>
+      </div>
+      
+      <!-- Add JavaScript for custom video player behavior with hover effect -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const videoOverlay = document.querySelector('.video-overlay');
+          const playButton = document.querySelector('.play-button');
+          const videoThumbnail = document.querySelector('.video-thumbnail');
+          const videoPlayer = document.getElementById('promo-video-player');
+          
+          // Add hover effect
+          videoOverlay.addEventListener('mouseenter', function() {
+            playButton.style.transform = 'scale(1.1)';
+          });
+          
+          videoOverlay.addEventListener('mouseleave', function() {
+            playButton.style.transform = 'scale(1)';
+          });
+          
+          videoOverlay.addEventListener('click', function() {
+            // Hide overlay and thumbnail
+            videoOverlay.style.display = 'none';
+            videoThumbnail.style.display = 'none';
+            
+            // Show and play video
+            videoPlayer.style.opacity = '1';
+            videoPlayer.style.zIndex = '3';
+            videoPlayer.play();
+          });
+        });
+      </script>
+    </div>
+
+    <!-- Continue main content wrapper with grayscale -->
+    <div class="w3-sand w3-grayscale w3-large">
       <!-- Download Container -->
       <div class="w3-container" id="menu">
         <div class="w3-content" style="max-width: 700px">
@@ -224,6 +296,7 @@
                 placeholder="Name"
                 required
                 name="name"
+                style="background-color: #f5f5f5; border-color: #e0e0e0;"
               />
             </p>
             <p>
@@ -233,6 +306,7 @@
                 placeholder="Email"
                 required
                 name="email"
+                style="background-color: #f5f5f5; border-color: #e0e0e0;"
               />
             </p>
             <p>
@@ -242,6 +316,7 @@
                 placeholder="Subject"
                 required
                 name="subject"
+                style="background-color: #f5f5f5; border-color: #e0e0e0;"
               />
             </p>
             <p>
@@ -250,7 +325,7 @@
                 placeholder="Message"
                 required
                 name="message"
-                style="height: 150px"
+                style="height: 150px; background-color: #f5f5f5; border-color: #e0e0e0;"
               ></textarea>
             </p>
             <p>
