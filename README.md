@@ -2,7 +2,7 @@
 
 This repository contains the website for LuminArch, a serious game for architects.
 
-https://varlikyucel.github.io/luminarch-website/
+https://luminarch.app
 
 ## Download Form Implementation
 
