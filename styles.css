@@ -4,55 +4,31 @@ html {
   font-family: "Inconsolata", sans-serif;
 }
 
-.bgimg {
-  background-position: center;
-  background-size: cover;
-  /* Background image now replaced by video */
-  /* background-image: url("images/header.jpg"); */
-  min-height: 75%;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.15);
-  background-blend-mode: overlay;
-  overflow: hidden; /* Ensure video doesn't overflow */
-}
-
-/* Video background styles */
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0; /* Changed from -1 to 0 to keep video inside header */
-  filter: brightness(1); /* Slightly darken video for better text contrast */
-  background-color: rgba(0, 0, 0, 0.4); /* Fallback if video is loading */
-}
-
 /* Ensure responsive behavior on all devices */
 @media only screen and (max-width: 768px) {
-  .video-background {
-    height: 100%;
-    object-position: center;
-  }
+  /* Styles for smaller screens can go here if needed, 
+     but Tailwind's responsive classes are preferred. */
 }
 
-/* Fallback for video */
-.bgimg img {
+/* Fallback for video (if using <img> tag directly in HTML) */
+/* 
+.bgimg img { 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
-}
+  z-index: -2; 
+} 
+*/
 
 .menu {
   display: none;
 }
 
 /* Custom styles to override W3.CSS */
+/* These might be removable if Tailwind covers them or can be adapted */
 .w3-text-grey {
   color: #757575 !important; /* A different shade of grey */
 }
@@ -62,6 +38,8 @@ html {
   font-style: italic;
 }
 
+/* W3.CSS button styling, likely replaced by Tailwind */
+/*
 .w3-button {
   transition: all 0.3s ease;
 }
@@ -69,10 +47,14 @@ html {
 .w3-button:hover {
   background-color: #333 !important;
 }
+*/
 
+/* W3.CSS card styling, Tailwind has its own card/shadow utilities */
+/*
 .w3-card {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+*/
 
 /* Footer styles */
 footer {
@@ -106,6 +88,7 @@ footer a:hover {
 }
 
 /* Promo video container styles */
+/* Consider replacing with Tailwind utilities */
 .video-container {
   position: relative;
   width: 100%;
@@ -137,7 +120,4 @@ footer a:hover {
   }
 }
 
-/* Add z-index to w3-top class to ensure it stays above the header */
-.w3-top {
-  z-index: 1000; /* Added to ensure navigation stays on top */
-}
+/* Removed .w3-top as Tailwind is now handling the fixed navigation */

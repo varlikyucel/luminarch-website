@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
-    <title>LuminArch Download Form</title>
+    <title>Download LuminArch</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Favicon -->
@@ -24,8 +24,9 @@
     />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inconsolata"
@@ -35,287 +36,583 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-      .page-container {
-        flex: 1 0 auto;
-        display: flex;
-        flex-direction: column;
-        padding-top: 60px; /* Space for the fixed navbar */
-      }
-      .main-content {
-        flex: 1;
-        display: flex;
-        align-items: center;
-      }
-      footer {
-        flex-shrink: 0;
-      }
-    </style>
   </head>
-  <body>
+  <body
+    class="bg-gray-900 text-gray-100 font-sans antialiased pt-14 bg-futuristic-animated bg-animated-grid"
+  >
     <!-- Links (sit on top) -->
-    <div class="w3-top">
-      <div class="w3-row w3-padding w3-black">
-        <div class="w3-col s3">
-          <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
-        </div>
-        <div class="w3-col s3">
-          <a href="index.html#about" class="w3-button w3-block w3-black"
-            >ABOUT</a
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-950 text-white shadow-2xl backdrop-filter backdrop-blur-lg bg-opacity-85 border-b border-teal-500/40"
+    >
+      <div
+        class="container mx-auto px-4 sm:px-6 py-2.5 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-xl md:text-2xl font-black text-teal-400 hover:text-purple-400 transition-colors duration-300 relative group tracking-tighter"
+        >
+          LUMINARCH
+          <span
+            class="absolute bottom-[-2px] left-0 w-full h-0.5 bg-gradient-to-r from-teal-400 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-400 ease-out origin-left"
+          ></span>
+        </a>
+        <div class="space-x-0.5 sm:space-x-1">
+          <a
+            href="index.html"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-teal-600/70 active:bg-teal-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
           >
-        </div>
-        <div class="w3-col s3">
-          <a href="index.html#menu" class="w3-button w3-block w3-black"
-            >DOWNLOAD</a
+            HOME
+            <span
+              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-purple-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
+            ></span>
+          </a>
+          <a
+            href="index.html#about"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-teal-600/70 active:bg-teal-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
           >
-        </div>
-        <div class="w3-col s3">
-          <a href="index.html#where" class="w3-button w3-block w3-black"
-            >CONTACT</a
+            ABOUT
+            <span
+              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-purple-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
+            ></span>
+          </a>
+          <a
+            href="index.html#menu"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-teal-600/70 active:bg-teal-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
           >
+            DOWNLOAD
+            <span
+              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-purple-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
+            ></span>
+          </a>
+          <a
+            href="index.html#where"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-teal-600/70 active:bg-teal-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+          >
+            CONTACT
+            <span
+              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-purple-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
+            ></span>
+          </a>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <!-- Page Container -->
-    <div class="page-container w3-sand w3-grayscale w3-large">
-      <!-- Main content -->
-      <div class="main-content">
-        <div class="w3-container w3-padding-16 w3-center" style="width: 100%">
-          <div class="w3-content" style="max-width: 700px">
-            <h5 class="w3-center w3-padding-32">
-              <span class="w3-tag w3-wide">Complete Your Download</span>
-            </h5>
+    <!-- Main Content Area -->
+    <main
+      id="main-content-start"
+      class="container mx-auto px-3 sm:px-4 py-12 sm:py-16 md:py-20 flex justify-center items-center min-h-[calc(100vh-56px-128px)]"
+    >
+      <!-- Download Form Section -->
+      <section
+        id="download-form-section"
+        class="w-full max-w-xl p-4 sm:p-6 md:p-8 bg-gray-800/85 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl border border-gray-700/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-teal-500/30"
+        style="animation-delay: 0.1s"
+      >
+        <div
+          class="absolute -bottom-12 -right-12 w-40 h-40 bg-teal-500/20 rounded-full filter blur-2xl opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
+        ></div>
+        <div class="relative z-10">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 tracking-tight bg-gradient-to-r from-teal-400 via-green-400 to-yellow-500 text-transparent bg-clip-text text-center"
+          >
+            Complete Your Download
+          </h2>
 
-            <div id="form-intro" class="w3-panel w3-leftbar w3-light-grey">
-              <p>
-                <i
-                  >Please fill out this quick form to receive your download link
-                  and installation password.</i
+          <!-- Form Intro Text -->
+          <div
+            class="fyi-box text-center mb-6 p-3 bg-blue-500/10 border border-blue-500/30 rounded-md card-clip-path transition-all duration-300"
+          >
+            <p class="text-blue-300 font-semibold text-sm sm:text-base">
+              <i class="fa fa-info-circle mr-1.5"></i> Info
+            </p>
+            <p class="text-xs sm:text-sm text-blue-400/80">
+              Please fill out this quick form to receive your download link and
+              installation password.
+            </p>
+          </div>
+
+          <!-- Form Container -->
+          <div id="download-form-container">
+            <form id="download-form" class="space-y-4 sm:space-y-5">
+              <div>
+                <label
+                  for="name"
+                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
+                  >Full Name</label
                 >
-              </p>
-            </div>
-
-            <!-- Form Section -->
-            <div id="download-form-container">
-              <form
-                id="download-form"
-                class="w3-container w3-card-4 w3-padding-16"
-                style="background-color: #f5f5f5; border-color: #e0e0e0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
-              >
-                <p>
-                  <input
-                    class="w3-input w3-padding-16 w3-border"
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Full Name"
-                    required
-                    style="background-color: #f5f5f5; border-color: #e0e0e0;"
-                  />
-                </p>
-                <p>
-                  <input
-                    class="w3-input w3-padding-16 w3-border"
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email Address"
-                    required
-                    style="background-color: #f5f5f5; border-color: #e0e0e0;"
-                  />
-                </p>
-                <p>
-                  <input
-                    class="w3-input w3-padding-16 w3-border"
-                    type="text"
-                    id="affiliation"
-                    name="affiliation"
-                    placeholder="School/Company"
-                    required
-                    style="background-color: #f5f5f5; border-color: #e0e0e0;"
-                  />
-                </p>
-                <p>
-                  <button
-                    id="submit-btn"
-                    class="w3-button w3-black"
-                    type="submit"
-                  >
-                    Submit & Download
-                  </button>
-                </p>
-              </form>
-            </div>
-
-            <!-- Success Section (initially hidden) -->
-            <div
-              id="download-success"
-              class="w3-container w3-card-4 w3-padding-16"
-              style="display: none; background-color: #f5f5f5; border-color: #e0e0e0;"
-            >
-              <h4 class="w3-center">
-                Thank you for your interest in LuminArch!
-              </h4>
-              <p>
-                Your download should begin automatically. If it doesn't,
-                <a
-                  id="direct-download-link"
-                  href="https://github.com/varlikyucel/luminarch-website/releases/download/LuminArch-Release/LuminArch.Setup.exe"
-                  >click here</a
-                >
-                to download manually.
-              </p>
-
-              <div class="w3-panel w3-leftbar w3-light-grey">
-                <p>
-                  <i
-                    >Important: When prompted during installation, please use
-                    the following password:</i
-                  >
-                </p>
-                <h3 class="w3-center">ITU2025LA</h3>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-3 py-2.5 text-sm bg-gray-700/85 border-2 border-gray-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-teal-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-gray-500"
+                  placeholder="Your Full Name"
+                />
               </div>
-
-              <p class="w3-center">
-                <a href="index.html" class="w3-button w3-black"
-                  >Return to Homepage</a
+              <div>
+                <label
+                  for="email"
+                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
+                  >Email Address</label
                 >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-3 py-2.5 text-sm bg-gray-700/85 border-2 border-gray-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-teal-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-gray-500"
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div>
+                <label
+                  for="affiliation"
+                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
+                  >School/Company</label
+                >
+                <input
+                  type="text"
+                  id="affiliation"
+                  name="affiliation"
+                  required
+                  class="w-full px-3 py-2.5 text-sm bg-gray-700/85 border-2 border-gray-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-teal-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-gray-500"
+                  placeholder="Your Affiliation"
+                />
+              </div>
+              <div class="text-center pt-1 sm:pt-2">
+                <button
+                  type="submit"
+                  id="submit-btn"
+                  class="inline-block w-full sm:w-auto bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-400 hover:to-teal-400 text-white font-bold py-3 px-10 text-sm sm:text-base rounded-md shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-green-500/40 focus:outline-none focus:ring-4 focus:ring-green-500/50 card-clip-path active:scale-95 relative overflow-hidden btn-shimmer"
+                >
+                  Submit & Download <i class="fa fa-download ml-1.5"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Success Section (initially hidden) -->
+          <div
+            id="download-success"
+            class="mt-8 p-4 sm:p-6 bg-green-900/50 border border-green-500/50 rounded-md shadow-lg card-clip-path relative overflow-hidden text-center"
+            style="display: none"
+          >
+            <div
+              class="absolute -top-8 -right-8 w-24 h-24 bg-green-500/25 rounded-full filter blur-xl opacity-50 pointer-events-none"
+            ></div>
+            <h4
+              class="text-lg sm:text-xl font-semibold text-green-300 mb-3 relative z-10"
+            >
+              Thank You!
+            </h4>
+            <p class="text-sm sm:text-base text-gray-300 mb-4 relative z-10">
+              Your download should begin shortly. If not, use the link below.
+            </p>
+            <p class="mb-4 relative z-10">
+              <a
+                id="direct-download-link"
+                href="https://github.com/varlikyucel/luminarch-website/releases/download/LuminArch-Release/LuminArch.Setup.exe"
+                class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-400 hover:to-teal-400 text-white font-bold py-2 px-5 rounded-md shadow-md transition-all duration-300 transform hover:scale-105 card-clip-path text-xs sm:text-sm btn-shimmer relative overflow-hidden"
+              >
+                Manual Download Link
+                <i class="fa fa-external-link-alt ml-1"></i>
+              </a>
+            </p>
+            <div
+              class="fyi-box p-3 bg-gray-700/50 border-l-4 border-teal-400 rounded-md text-left mb-4 relative z-10"
+            >
+              <p class="text-xs sm:text-sm text-gray-300 mb-1">
+                <i class="fa fa-key mr-1.5 text-teal-400"></i
+                ><strong>Installation Password:</strong>
+              </p>
+              <p
+                class="text-center font-mono text-lg sm:text-xl text-yellow-300 tracking-widest bg-gray-900/50 py-1 rounded"
+              >
+                ITU2025LA
               </p>
             </div>
+            <p class="mt-6 relative z-10">
+              <a
+                href="index.html"
+                class="inline-block bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-6 rounded-md shadow transition-colors duration-300 text-sm card-clip-path btn-shimmer relative overflow-hidden"
+              >
+                Return to Homepage <i class="fa fa-home ml-1.5"></i>
+              </a>
+            </p>
           </div>
         </div>
-      </div>
-    </div>
+        <div
+          class="absolute top-3 right-3 w-12 h-12 bg-gradient-to-br from-gray-700/70 to-gray-800/70 rounded-full opacity-40 animate-ping pointer-events-none decorative-glow-2"
+          style="animation-duration: 5s"
+        ></div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="w3-center w3-light-grey w3-large w3-padding-16">
-      <div class="copyright">
-        <span>Varlık Yücel</span>
-        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span>All Rights Reserved</span>
-        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span>© <span id="current-year"></span></span>
+    <footer
+      class="bg-gray-950/85 backdrop-filter backdrop-blur-lg border-t-2 border-teal-500/50 py-10 sm:py-12 text-center mt-auto relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 -z-10 opacity-25"
+        style="
+          background-image: radial-gradient(
+              circle at center,
+              theme('colors.teal.700 / 0.35') 0,
+              transparent 55%
+            ),
+            repeating-linear-gradient(
+              0deg,
+              theme('colors.purple.800 / 0.25') 0px,
+              theme('colors.purple.800 / 0.25') 1px,
+              transparent 1px,
+              transparent 18px
+            );
+        "
+      ></div>
+      <div class="container mx-auto relative z-10 px-4">
+        <div class="text-gray-400 mb-5 sm:mb-6 text-xs sm:text-sm">
+          <span>Varlık Yücel</span>
+          <span class="mx-1 sm:mx-1.5">&nbsp;&bull;&nbsp;</span>
+          <span>All Rights Reserved</span>
+          <span class="mx-1 sm:mx-1.5">&nbsp;&bull;&nbsp;</span>
+          <span>&copy; <span id="current-year"></span> LuminArch Project</span>
+        </div>
+        <div class="flex justify-center space-x-4 sm:space-x-5 mb-6 sm:mb-7">
+          <a
+            href="https://varlik.myportfolio.com/"
+            target="_blank"
+            class="text-gray-400 hover:text-teal-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[-8deg] hover:shadow-[0_0_15px_theme('colors.teal.500/0.7')] group"
+            aria-label="Portfolio"
+          >
+            <i
+              class="fa fa-globe fa-md sm:fa-lg group-hover:animate-pulse-glow"
+            ></i>
+          </a>
+          <a
+            href="https://github.com/varlikyucel"
+            target="_blank"
+            class="text-gray-400 hover:text-purple-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[8deg] hover:shadow-[0_0_15px_theme('colors.purple.500/0.7')] group"
+            aria-label="GitHub"
+          >
+            <i
+              class="fa fa-github fa-md sm:fa-lg group-hover:animate-pulse-glow"
+            ></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/varlikyucel"
+            target="_blank"
+            class="text-gray-400 hover:text-teal-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[-5deg] hover:shadow-[0_0_15px_theme('colors.teal.500/0.7')] group"
+            aria-label="LinkedIn"
+          >
+            <i
+              class="fa fa-linkedin fa-md sm:fa-lg group-hover:animate-pulse-glow"
+            ></i>
+          </a>
+          <a
+            href="https://behance.net/varlikyucel"
+            target="_blank"
+            class="text-gray-400 hover:text-purple-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[5deg] hover:shadow-[0_0_15px_theme('colors.purple.500/0.7')] group"
+            aria-label="Behance"
+          >
+            <i
+              class="fa fa-behance fa-md sm:fa-lg group-hover:animate-pulse-glow"
+            ></i>
+          </a>
+        </div>
+        <p class="text-xs text-gray-500/80 font-mono">
+          interface v2.1.0-dense // experimental build
+        </p>
       </div>
-      <div class="social-icons">
-        <a
-          href="https://varlik.myportfolio.com/"
-          target="_blank"
-          class="w3-hover-text-green"
-        >
-          <i class="fa fa-globe"></i>
-        </a>
-        <a
-          href="https://github.com/varlikyucel"
-          target="_blank"
-          class="w3-hover-text-green"
-        >
-          <i class="fa fa-github"></i>
-        </a>
-        <a
-          href="https://linkedin.com/in/varlikyucel"
-          target="_blank"
-          class="w3-hover-text-green"
-        >
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a
-          href="https://behance.net/varlikyucel"
-          target="_blank"
-          class="w3-hover-text-green"
-        >
-          <i class="fa fa-behance"></i>
-        </a>
-      </div>
+      <div
+        class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-teal-500/60 via-purple-600/60 to-pink-600/60 animate-scanline"
+        style="
+          animation-duration: 7s;
+          animation-direction: alternate-reverse;
+          filter: blur(2.5px);
+        "
+      ></div>
     </footer>
 
     <script>
-      // Form submission handler
-      document
-        .getElementById("download-form")
-        .addEventListener("submit", function (e) {
+      // Set current year in footer
+      if (document.getElementById("current-year")) {
+        document.getElementById("current-year").innerHTML =
+          new Date().getFullYear();
+      }
+
+      // Original Form submission handler (keep this logic)
+      const downloadForm = document.getElementById("download-form");
+      const successSection = document.getElementById("download-success");
+      const formContainer = document.getElementById("download-form-container");
+      const formIntro = document.querySelector(
+        "#download-form-section .fyi-box"
+      ); // Corrected selector
+
+      if (downloadForm && successSection && formContainer && formIntro) {
+        downloadForm.addEventListener("submit", function (e) {
           e.preventDefault();
 
-          // Get form values
+          // Get form values (can add validation here if needed)
           const name = document.getElementById("name").value.trim();
           const email = document.getElementById("email").value.trim();
           const affiliation = document
             .getElementById("affiliation")
             .value.trim();
 
-          // Validate form fields
+          // Basic validation example
           if (!name || !email || !affiliation) {
-            alert("Please fill out all fields");
+            alert("Please fill out all fields.");
             return;
           }
 
-          // Email validation
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailRegex.test(email)) {
-            alert("Please enter a valid email address");
-            return;
+          // Simulate sending data (replace with actual fetch/AJAX if needed)
+          console.log("Form Submitted:", { name, email, affiliation });
+
+          // Hide form and intro, show success message
+          formIntro.style.display = "none";
+          formContainer.style.display = "none";
+          successSection.style.display = "block";
+          successSection.classList.add("animate-text-focus-in"); // Add entrance animation
+
+          // Trigger download (optional, might happen server-side)
+          const downloadLink = document.getElementById("direct-download-link");
+          if (downloadLink) {
+            // window.location.href = downloadLink.href; // Redirect to download
+            // Or simulate click if direct download is desired on form submit
+            // downloadLink.click();
           }
 
-          // Create form data for submission to Formspree
-          const formData = new FormData();
-          formData.append("name", name);
-          formData.append("email", email);
-          formData.append("affiliation", affiliation);
-
-          // Submit the form data to Formspree
-          fetch("https://formspree.io/f/xkgjeqwd", {
-            method: "POST",
-            body: formData,
-            headers: {
-              Accept: "application/json",
-            },
+          // You might want to send this data to a server using fetch() here
+          /*
+          fetch('/your-server-endpoint', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email, affiliation })
           })
-            .then((response) => {
-              if (response.ok) {
-                // Show success message
-                document.getElementById(
-                  "download-form-container"
-                ).style.display = "none";
-                document.getElementById("download-success").style.display =
-                  "block";
-                document.getElementById("form-intro").style.display = "none";
-
-                // Start download automatically after a short delay
-                setTimeout(function () {
-                  window.location.href =
-                    "https://github.com/varlikyucel/luminarch-website/releases/download/LuminArch-Release/LuminArch.Setup.exe";
-                }, 1500);
-              } else {
-                response.json().then((data) => {
-                  if (Object.hasOwn(data, "errors")) {
-                    alert(
-                      data["errors"].map((error) => error["message"]).join(", ")
-                    );
-                  } else {
-                    alert("Oops! There was a problem submitting your form");
-                  }
-                });
-              }
-            })
-            .catch((error) => {
-              // Handle any errors
-              console.error("Error:", error);
-              alert("An error occurred. Please try again later.");
-            });
+          .then(response => response.json())
+          .then(data => console.log('Server Response:', data))
+          .catch(error => console.error('Error sending data:', error));
+          */
         });
-
-      // Set current year in footer
-      document.getElementById("current-year").innerHTML =
-        new Date().getFullYear();
+      } else {
+        console.error(
+          "Required elements for download form logic not found. Check IDs: download-form, download-success, download-form-container, and the fyi-box within #download-form-section."
+        );
+      }
     </script>
+
+    <style>
+      /* All the custom keyframes and utility classes from index.html */
+      @keyframes scanline {
+        0% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(200%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      .animate-scanline {
+        animation: scanline 10s linear infinite;
+      }
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 5px theme("colors.teal.500"),
+            0 0 10px theme("colors.teal.600");
+          opacity: 0.8;
+        }
+        50% {
+          box-shadow: 0 0 15px theme("colors.teal.400"),
+            0 0 25px theme("colors.teal.500");
+          opacity: 1;
+        }
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 3s infinite ease-in-out;
+      }
+      @keyframes subtle-float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .hover-subtle-float:hover {
+        animation: subtle-float 0.8s ease-in-out forwards;
+      }
+      @keyframes futuristic-bg {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .bg-futuristic-animated {
+        background-size: 300% 300%;
+        background-image: linear-gradient(
+          -45deg,
+          theme("colors.gray.900") 0%,
+          theme("colors.gray.800") 25%,
+          theme("colors.teal.900") 50%,
+          theme("colors.gray.800") 75%,
+          theme("colors.gray.900") 100%
+        );
+        animation: futuristic-bg 15s ease infinite;
+      }
+      @keyframes text-focus-in {
+        0% {
+          filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      .animate-text-focus-in {
+        animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+      }
+      .card-clip-path {
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100% calc(100% - 20px),
+          calc(100% - 20px) 100%,
+          0 100%
+        );
+      }
+      .input-tech-focus:focus {
+        border-color: theme("colors.teal.400");
+        box-shadow: 0 0 15px theme("colors.teal.500 / 0.5"),
+          inset 0 0 5px theme("colors.purple.600 / 0.3");
+      }
+      @keyframes border-pulse {
+        0% {
+          border-color: theme("colors.teal.500 / 0.5");
+          box-shadow: 0 0 8px theme("colors.teal.500 / 0.3");
+        }
+        50% {
+          border-color: theme("colors.purple.500 / 0.7");
+          box-shadow: 0 0 16px theme("colors.purple.500 / 0.5");
+        }
+        100% {
+          border-color: theme("colors.teal.500 / 0.5");
+          box-shadow: 0 0 8px theme("colors.teal.500 / 0.3");
+        }
+      }
+      .group:hover .border-animated-pulse {
+        animation: border-pulse 2.5s infinite ease-in-out;
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+      .btn-shimmer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          transparent 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          transparent 100%
+        );
+        transform: skewX(-25deg);
+        pointer-events: none;
+      }
+      .group\/button:hover .btn-shimmer::before,
+      .btn-shimmer-active::before,
+      a:hover.btn-shimmer::before {
+        animation: shimmer 1s infinite linear;
+      } /* Updated selector for links */
+      @keyframes subtle-grid-pan {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 100px 100px;
+        }
+      }
+      .bg-animated-grid::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            theme("colors.teal.900 / 0.03") 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            90deg,
+            theme("colors.teal.900 / 0.03") 1px,
+            transparent 1px
+          );
+        background-size: 20px 20px;
+        z-index: -1;
+        animation: subtle-grid-pan 20s linear infinite;
+        pointer-events: none;
+      }
+      @keyframes text-decode-glitch {
+        0% {
+          opacity: 0;
+          text-shadow: 0 0 7px theme("colors.purple.500 / 0.7");
+          transform: translateY(10px) skewX(-10deg);
+        }
+        20% {
+          opacity: 0.3;
+          text-shadow: 0 0 5px theme("colors.teal.400 / 0.7");
+          content: "R@nD0m_Ch@r$";
+        }
+        60% {
+          opacity: 0.7;
+          text-shadow: 0 0 3px theme("colors.cyan.400 / 0.7");
+          transform: translateY(0) skewX(0deg);
+        }
+        100% {
+          opacity: 1;
+          text-shadow: none;
+          transform: translateY(0) skewX(0deg);
+        }
+      }
+      .animate-text-decode {
+        animation: text-decode-glitch 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+          both;
+      }
+      .group:hover .decorative-glow-1 {
+        transform: scale(1.3) translateZ(0);
+        opacity: theme("opacity.90");
+        filter: blur(theme("blur.2xl"));
+      }
+      .group:hover .decorative-glow-2 {
+        transform: scale(1.2) translateZ(0) rotate(15deg);
+        opacity: theme("opacity.80");
+        filter: blur(theme("blur.xl"));
+      }
+      .fyi-box:hover {
+        border-color: theme("colors.yellow.400 / 0.7");
+        box-shadow: 0 0 15px theme("colors.yellow.500 / 0.4");
+        transform: translateY(-2px) scale(1.02);
+      }
+    </style>
   </body>
 </html>
