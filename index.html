@@ -825,12 +825,20 @@
 
       if (mobileMenuButton && mobileMenu && iconHamburger && iconClose) {
         mobileMenuButton.addEventListener("click", () => {
-          const isOpen = mobileMenu.classList.toggle("hidden");
-          mobileMenuButton.setAttribute("aria-expanded", isOpen);
-          iconHamburger.classList.toggle("hidden", isOpen);
-          iconHamburger.classList.toggle("block", !isOpen);
-          iconClose.classList.toggle("hidden", !isOpen);
-          iconClose.classList.toggle("block", isOpen);
+          // mobileMenu.classList.toggle('hidden') returns true if 'hidden' was ADDED (menu is now closed),
+          // and false if 'hidden' was REMOVED (menu is now open).
+          const menuIsNowClosed = mobileMenu.classList.toggle("hidden");
+          const menuIsOpen = !menuIsNowClosed;
+
+          mobileMenuButton.setAttribute("aria-expanded", menuIsOpen);
+
+          // If menu is open: Hamburger should be hidden, Close should be visible.
+          // If menu is closed: Hamburger should be visible, Close should be hidden.
+          iconHamburger.classList.toggle("hidden", menuIsOpen);
+          iconHamburger.classList.toggle("block", !menuIsOpen); // Or menuIsNowClosed
+
+          iconClose.classList.toggle("hidden", !menuIsOpen); // Or menuIsNowClosed
+          iconClose.classList.toggle("block", menuIsOpen);
         });
       }
 
