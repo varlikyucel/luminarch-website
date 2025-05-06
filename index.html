@@ -718,6 +718,32 @@
           }, 500); // Adjust delay as needed
         }
       });
+
+      // Scroll to promo video section on exiting fullscreen
+      document.addEventListener("fullscreenchange", () => {
+        const htmlElement = document.documentElement;
+        if (!document.fullscreenElement) {
+          // Exited fullscreen
+          const promoVideoSection = document.getElementById("promo-video");
+          if (promoVideoSection) {
+            // Wait a fraction of a second for the browser to settle after fullscreen exit
+            setTimeout(() => {
+              // Temporarily disable smooth scrolling for an instant jump
+              htmlElement.classList.remove("scroll-smooth");
+
+              promoVideoSection.scrollIntoView({
+                behavior: "auto",
+                block: "start",
+              });
+
+              // Re-enable smooth scrolling immediately after the jump is processed
+              setTimeout(() => {
+                htmlElement.classList.add("scroll-smooth");
+              }, 0);
+            }, 100);
+          }
+        }
+      });
     </script>
 
     <style>
