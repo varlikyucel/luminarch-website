@@ -38,8 +38,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body
-    class="bg-gray-900 text-gray-100 font-sans antialiased bg-futuristic-animated bg-animated-grid"
+    class="bg-gray-900 text-gray-100 font-sans antialiased bg-futuristic-animated bg-animated-grid overflow-hidden"
   >
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 z-[9999] flex items-center justify-center bg-gray-950 transition-opacity duration-500 ease-out"
+    >
+      <div
+        class="w-16 h-16 rounded-full border-4 border-teal-500/50 border-t-teal-400 animate-spin-slow"
+      ></div>
+    </div>
+
     <!-- Links (sit on top) -->
     <nav
       class="fixed top-0 left-0 right-0 z-50 bg-gray-950 text-white shadow-2xl backdrop-filter backdrop-blur-lg bg-opacity-85 border-b border-teal-500/40"
@@ -694,6 +704,20 @@
           });
         }
       });
+
+      // Preloader fade-out logic
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        const body = document.body;
+        if (preloader) {
+          // Add a minimum display time (e.g., 500ms) to prevent flashing on fast loads
+          setTimeout(() => {
+            preloader.classList.add("preloader-hidden");
+            body.classList.add("body-loaded"); // Restore scrolling
+            body.classList.remove("overflow-hidden");
+          }, 500); // Adjust delay as needed
+        }
+      });
     </script>
 
     <style>
@@ -931,6 +955,31 @@
       .active-tab-button .relative.z-10 {
         /* Target the text span */
         color: theme("colors.yellow.300") !important;
+      }
+
+      /* Custom spin animation with slower speed */
+      @keyframes spin-slow {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 1.5s linear infinite;
+      }
+
+      /* Preloader styles */
+      #preloader {
+        /* Base styles applied via Tailwind */
+      }
+      .preloader-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden; /* Hide after transition */
+        transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+      }
+      /* Style to remove overflow hidden once loaded */
+      .body-loaded {
+        overflow: auto;
       }
     </style>
   </body>
