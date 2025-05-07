@@ -4,7 +4,7 @@
     <title>LuminArch: A Serious Game For Architects</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#a7f3d0" />
+    <meta name="theme-color" content="#15803d" />
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -39,12 +39,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body
-    class="bg-neutral-100 text-neutral-800 font-sans antialiased bg-futuristic-animated bg-animated-grid overflow-hidden"
+    class="bg-neutral-900 text-gray-100 font-sans antialiased bg-futuristic-animated bg-animated-grid overflow-hidden"
   >
     <!-- Preloader -->
     <div
       id="preloader"
-      class="fixed inset-0 z-[9999] flex items-center justify-center bg-neutral-50 transition-opacity duration-500 ease-out"
+      class="fixed inset-0 z-[9999] flex items-center justify-center bg-gray-950 transition-opacity duration-500 ease-out"
     >
       <div
         class="w-16 h-16 rounded-full border-4 border-green-500/50 border-t-green-400 animate-spin-slow"
@@ -53,18 +53,18 @@
 
     <!-- Links (sit on top) -->
     <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-white/85 text-neutral-800 shadow-md backdrop-filter backdrop-blur-lg bg-opacity-85 border-b border-neutral-200/80"
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-950 text-white shadow-2xl backdrop-filter backdrop-blur-lg bg-opacity-85 border-b border-green-500/40"
     >
       <div
         class="container mx-auto px-4 sm:px-6 py-2.5 flex justify-between items-center"
       >
         <a
           href="index.html"
-          class="text-xl md:text-2xl font-black text-green-600 hover:text-amber-600 transition-colors duration-300 relative group tracking-tighter"
+          class="text-xl md:text-2xl font-black text-green-400 hover:text-amber-400 transition-colors duration-300 relative group tracking-tighter"
         >
           LUMINARCH
           <span
-            class="absolute bottom-[-2px] left-0 w-full h-0.5 bg-gradient-to-r from-green-500 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-400 ease-out origin-left"
+            class="absolute bottom-[-2px] left-0 w-full h-0.5 bg-gradient-to-r from-green-400 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-400 ease-out origin-left"
           ></span>
         </a>
 
@@ -75,7 +75,7 @@
         >
           <a
             href="index.html"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-neutral-600 hover:text-green-700 hover:bg-green-100/70 active:bg-green-200/70 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
           >
             HOME
             <span
@@ -84,7 +84,7 @@
           </a>
           <a
             href="index.html#about"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-neutral-600 hover:text-green-700 hover:bg-green-100/70 active:bg-green-200/70 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
           >
             ABOUT
             <span
@@ -93,7 +93,7 @@
           </a>
           <a
             href="index.html#menu"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-neutral-600 hover:text-green-700 hover:bg-green-100/70 active:bg-green-200/70 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
           >
             DOWNLOAD
             <span
@@ -102,7 +102,7 @@
           </a>
           <a
             href="index.html#where"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-neutral-600 hover:text-green-700 hover:bg-green-100/70 active:bg-green-200/70 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
           >
             CONTACT
             <span
@@ -115,7 +115,7 @@
         <div class="md:hidden">
           <button
             id="mobile-menu-button"
-            class="text-neutral-600 hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500 p-2 rounded-md"
+            class="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500 p-2 rounded-md"
             aria-label="Toggle menu"
             aria-expanded="false"
           >
@@ -156,27 +156,27 @@
       <!-- Mobile Menu Links (Hidden Initially, shown on toggle) -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white/95 backdrop-filter backdrop-blur-sm border-t border-neutral-200/80"
+        class="hidden md:hidden bg-gray-900/95 backdrop-filter backdrop-blur-sm border-t border-green-500/30"
       >
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a
             href="index.html"
-            class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-green-700 hover:bg-green-100/70 transition-colors duration-200"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-green-700/50 transition-colors duration-200"
             >HOME</a
           >
           <a
             href="index.html#about"
-            class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-green-700 hover:bg-green-100/70 transition-colors duration-200"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-green-700/50 transition-colors duration-200"
             >ABOUT</a
           >
           <a
             href="index.html#menu"
-            class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-green-700 hover:bg-green-100/70 transition-colors duration-200"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-green-700/50 transition-colors duration-200"
             >DOWNLOAD</a
           >
           <a
             href="index.html#where"
-            class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-green-700 hover:bg-green-100/70 transition-colors duration-200"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-green-700/50 transition-colors duration-200"
             >CONTACT</a
           >
         </div>
@@ -209,11 +209,11 @@
       <!-- Clickable Anchor Link to About Section -->
       <a
         href="#about"
-        class="block max-w-2xl lg:max-w-3xl mx-auto no-underline focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-4 focus:ring-offset-neutral-100 rounded-xl transition-all duration-300 hover:scale-[1.02]"
+        class="block max-w-2xl lg:max-w-3xl mx-auto no-underline focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-4 focus:ring-offset-gray-900 rounded-xl transition-all duration-300 hover:scale-[1.02]"
         aria-label="Scroll to About section"
       >
         <div
-          class="relative z-10 text-center p-4 md:p-8 bg-neutral-800/85 text-neutral-100 backdrop-filter backdrop-blur-md rounded-xl shadow-2xl border-2 border-green-500/50 group overflow-hidden animate-text-focus-in card-clip-path cursor-pointer"
+          class="relative z-10 text-center p-4 md:p-8 bg-black/75 backdrop-filter backdrop-blur-md rounded-xl shadow-2xl border-2 border-green-500/50 group overflow-hidden animate-text-focus-in card-clip-path cursor-pointer"
         >
           <div
             class="absolute inset-0 -z-10 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
@@ -240,7 +240,7 @@
             LuminArch
           </h1>
           <p
-            class="text-base sm:text-lg md:text-xl mb-1 text-neutral-200 font-mono tracking-wider uppercase animate-text-decode pointer-events-none"
+            class="text-base sm:text-lg md:text-xl mb-1 text-gray-200 font-mono tracking-wider uppercase animate-text-decode pointer-events-none"
             style="animation-delay: 0.3s"
           >
             Sunlight Simulation Game
@@ -272,51 +272,51 @@
       <!-- About Section -->
       <section
         id="about"
-        class="p-4 sm:p-6 md:p-8 bg-white/90 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg border border-neutral-200/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-amber-500/20"
+        class="p-4 sm:p-6 md:p-8 bg-neutral-800/85 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl border border-neutral-700/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-amber-500/30"
         style="animation-delay: 0.1s"
       >
         <div
-          class="absolute -top-8 -left-8 w-28 h-28 bg-green-400/20 rounded-full filter blur-2xl opacity-50 group-hover:scale-110 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
+          class="absolute -top-8 -left-8 w-28 h-28 bg-green-500/25 rounded-full filter blur-2xl opacity-60 group-hover:scale-110 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
         ></div>
         <div class="max-w-3xl mx-auto relative z-10">
           <h2
-            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-6 tracking-tight bg-gradient-to-r from-green-500 via-amber-500 to-orange-500 text-transparent bg-clip-text text-center"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-6 tracking-tight bg-gradient-to-r from-green-400 via-amber-500 to-orange-500 text-transparent bg-clip-text text-center"
           >
             About LuminArch
           </h2>
           <div
-            class="space-y-3 sm:space-y-4 text-neutral-700 text-sm sm:text-base leading-relaxed text-center sm:text-left"
+            class="space-y-3 sm:space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed text-center sm:text-left"
           >
-            <p class="hover:text-green-600 transition-colors duration-300">
+            <p class="hover:text-green-300 transition-colors duration-300">
               LuminArch: a single-player architectural design game where
               creativity meets science. Players design simple structures using
               walls, windows, and sunshades—then see how their choices affect
               sunlight, glare, and shadow in real-time. Simulation scores
               daylight performance using real-world sun data.
             </p>
-            <p class="hover:text-green-600 transition-colors duration-300">
+            <p class="hover:text-green-300 transition-colors duration-300">
               Built for architecture students and enthusiasts, LuminArch turns
               daylight design into an engaging, educational challenge.
             </p>
           </div>
           <div
-            class="mt-6 sm:mt-8 bg-neutral-100/80 p-3 sm:p-4 rounded-md shadow-inner border-l-4 border-green-500 group-hover:border-amber-500 transition-all duration-300 card-clip-path relative overflow-hidden text-center sm:text-left"
+            class="mt-6 sm:mt-8 bg-neutral-700/80 p-3 sm:p-4 rounded-md shadow-lg border-l-4 border-green-500 group-hover:border-amber-500 transition-all duration-300 card-clip-path relative overflow-hidden text-center sm:text-left"
           >
             <div
-              class="absolute inset-0 opacity-10 group-hover:opacity-15 transition-opacity duration-500"
+              class="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-500"
               style="
                 background-image: repeating-radial-gradient(
                     circle at 0 0,
                     transparent 0,
-                    theme('colors.green.200') 30px /* Lighter shade */
+                    theme('colors.green.900') 30px
                   ),
                   repeating-linear-gradient(
-                    theme('colors.amber.100'),
-                    theme('colors.amber.200') /* Lighter shades */
+                    theme('colors.amber.800'),
+                    theme('colors.amber.900')
                   );
               "
             ></div>
-            <p class="text-xs sm:text-sm italic text-neutral-500 relative z-10">
+            <p class="text-xs sm:text-sm italic text-gray-400 relative z-10">
               LuminArch is a serious game by Varlık Yücel (PhD thesis),
               supervised by Assoc. Prof. Dr. Sema Alaçam, ITU Architectural
               Design Computing.
@@ -324,27 +324,27 @@
           </div>
         </div>
         <div
-          class="absolute bottom-[-10px] right-[-10px] w-2/5 h-1/5 bg-gradient-to-tr from-amber-400/30 to-transparent blur-xl rounded-tl-full pointer-events-none opacity-60 group-hover:opacity-80 transition-opacity duration-500 decorative-glow-2"
+          class="absolute bottom-[-10px] right-[-10px] w-2/5 h-1/5 bg-gradient-to-tr from-amber-600/35 to-transparent blur-xl rounded-tl-full pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity duration-500 decorative-glow-2"
         ></div>
       </section>
 
       <!-- Promo Video Section -->
       <section
         id="promo-video"
-        class="p-4 sm:p-6 md:p-8 bg-white/90 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg border border-neutral-200/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-green-500/20"
+        class="p-4 sm:p-6 md:p-8 bg-neutral-800/85 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl border border-neutral-700/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-green-500/30"
         style="animation-delay: 0.2s"
       >
         <div
-          class="absolute -top-8 -right-8 w-28 h-28 bg-amber-400/20 rounded-full filter blur-2xl opacity-50 group-hover:scale-110 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
+          class="absolute -top-8 -right-8 w-28 h-28 bg-amber-500/25 rounded-full filter blur-2xl opacity-60 group-hover:scale-110 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
         ></div>
         <div class="max-w-3xl mx-auto relative z-10">
           <h2
-            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-6 tracking-tight bg-gradient-to-r from-amber-500 via-green-500 to-lime-500 text-transparent bg-clip-text text-center"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-6 tracking-tight bg-gradient-to-r from-amber-500 via-green-400 to-lime-400 text-transparent bg-clip-text text-center"
           >
             LuminArch in Action
           </h2>
           <div
-            class="relative w-full aspect-video rounded-md overflow-hidden shadow-xl mb-3 border-2 border-green-400/60 group-hover:border-amber-500/70 transition-all duration-300"
+            class="relative w-full aspect-video rounded-md overflow-hidden shadow-xl mb-3 border-2 border-green-500/40 group-hover:border-amber-500/70 transition-all duration-300"
           >
             <div
               class="video-overlay absolute inset-0 flex justify-center items-center cursor-pointer z-20 bg-black/60 hover:bg-black/40 transition-opacity duration-300"
@@ -370,35 +370,35 @@
               id="promo-video-player"
               controls
               preload="metadata"
-              class="absolute inset-0 w-full h-full object-contain z-0 opacity-0 transition-opacity duration-300 bg-neutral-800"
+              class="absolute inset-0 w-full h-full object-contain z-0 opacity-0 transition-opacity duration-300"
             >
               <source src="videos/luminarch-promo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <p
-            class="text-xs sm:text-sm text-neutral-500 italic group-hover:text-green-600 transition-colors duration-300 text-center"
+            class="text-xs sm:text-sm text-gray-400 italic group-hover:text-green-300 transition-colors duration-300 text-center"
           >
             Innovative gameplay: architectural design meets daylight simulation.
           </p>
         </div>
         <div
-          class="absolute top-1/2 -left-12 w-24 h-24 bg-gradient-to-br from-green-300 to-amber-300 rounded-full filter blur-2xl opacity-20 group-hover:opacity-30 transition-all duration-700 animate-subtle-float pointer-events-none decorative-glow-2"
+          class="absolute top-1/2 -left-12 w-24 h-24 bg-gradient-to-br from-green-700 to-amber-700 rounded-full filter blur-2xl opacity-25 group-hover:opacity-40 transition-all duration-700 animate-subtle-float pointer-events-none decorative-glow-2"
         ></div>
       </section>
 
       <!-- Download Section -->
       <section
         id="menu"
-        class="p-4 sm:p-6 md:p-8 bg-white/90 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg border border-neutral-200/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-amber-500/20"
+        class="p-4 sm:p-6 md:p-8 bg-neutral-800/85 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl border border-neutral-700/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-amber-500/30"
         style="animation-delay: 0.3s"
       >
         <div
-          class="absolute top-1/4 -right-16 w-32 h-32 bg-green-400/20 rounded-full filter blur-2xl opacity-50 group-hover:scale-105 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
+          class="absolute top-1/4 -right-16 w-32 h-32 bg-green-500/20 rounded-full filter blur-2xl opacity-50 group-hover:scale-105 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
         ></div>
         <div class="max-w-3xl mx-auto relative z-10">
           <h2
-            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 tracking-tight bg-gradient-to-r from-green-500 via-lime-500 to-yellow-500 text-transparent bg-clip-text text-center"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 tracking-tight bg-gradient-to-r from-green-400 via-lime-400 to-yellow-500 text-transparent bg-clip-text text-center"
           >
             Download
           </h2>
@@ -407,28 +407,28 @@
           >
             <button
               onclick="openMenu(event, 'Game')"
-              class="tablink-new px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base font-semibold rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-green-500 card-clip-path group/button relative overflow-hidden border-2 border-transparent hover:border-green-400/70 active:scale-95 btn-shimmer"
+              class="tablink-new px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base font-semibold rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-green-500 card-clip-path group/button relative overflow-hidden border-2 border-transparent hover:border-green-500/70 active:scale-95 btn-shimmer"
               id="myLinkActive"
             >
               <span
                 id="game-tab-bg"
-                class="absolute inset-0 bg-gradient-to-br from-green-500 to-amber-600 opacity-90 group-hover/button:opacity-100 transition-opacity duration-300"
+                class="absolute inset-0 bg-gradient-to-br from-green-600 to-amber-700 opacity-75 group-hover/button:opacity-90 transition-opacity duration-300"
               ></span>
               <span
-                class="relative z-10 text-white group-hover/button:text-yellow-100 transition-colors duration-200"
+                class="relative z-10 text-white group-hover/button:text-yellow-300 transition-colors duration-200"
                 >Game Installer</span
               >
             </button>
             <button
               onclick="openMenu(event, 'Additional')"
-              class="tablink-new px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base font-semibold rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-neutral-500 card-clip-path group/button relative overflow-hidden border-2 border-neutral-300 hover:border-neutral-400/70 active:scale-95 btn-shimmer"
+              class="tablink-new px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base font-semibold rounded-md shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-gray-600 card-clip-path group/button relative overflow-hidden border-2 border-transparent hover:border-gray-500/70 active:scale-95 btn-shimmer"
             >
               <span
                 id="additional-tab-bg"
-                class="absolute inset-0 bg-neutral-200 opacity-90 group-hover/button:opacity-100 transition-opacity duration-300"
+                class="absolute inset-0 bg-gray-700 opacity-75 group-hover/button:opacity-90 transition-opacity duration-300"
               ></span>
               <span
-                class="relative z-10 text-neutral-700 group-hover/button:text-neutral-900 transition-colors duration-200"
+                class="relative z-10 text-gray-300 group-hover/button:text-white transition-colors duration-200"
                 >Additional Files</span
               >
             </button>
@@ -436,24 +436,24 @@
 
           <div
             id="Game"
-            class="menu-content p-4 sm:p-6 bg-neutral-50/80 backdrop-filter backdrop-blur-sm rounded-md shadow-inner border border-neutral-200/60 relative overflow-hidden card-clip-path text-center"
+            class="menu-content p-4 sm:p-6 bg-neutral-700/80 backdrop-filter backdrop-blur-sm rounded-md shadow-inner border border-neutral-600/60 relative overflow-hidden card-clip-path text-center"
           >
             <div
-              class="absolute -bottom-8 -left-8 w-24 h-24 bg-lime-400/20 rounded-full filter blur-xl opacity-40 group-hover:opacity-50 transition-all duration-700 animate-pulse-glow pointer-events-none"
+              class="absolute -bottom-8 -left-8 w-24 h-24 bg-lime-500/25 rounded-full filter blur-xl opacity-40 group-hover:opacity-60 transition-all duration-700 animate-pulse-glow pointer-events-none"
             ></div>
-            <h5 class="text-lg sm:text-xl font-semibold text-neutral-800 mb-3">
-              LuminArch Installer <span class="text-green-600">v.1.0</span> (Win
+            <h5 class="text-lg sm:text-xl font-semibold text-white mb-3">
+              LuminArch Installer <span class="text-green-400">v.1.0</span> (Win
               x64)
             </h5>
-            <p class="text-neutral-600 mb-4 text-xs sm:text-sm">
+            <p class="text-gray-400 mb-4 text-xs sm:text-sm">
               Download the game installer.
             </p>
             <a
               href="download-form.html"
-              class="inline-block bg-gradient-to-r from-lime-500 to-green-500 hover:from-lime-400 hover:to-green-400 text-white font-bold py-2.5 px-6 sm:py-3 sm:px-8 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lime-500/40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-50 focus:ring-lime-500 card-clip-path text-sm sm:text-base relative overflow-hidden btn-shimmer"
+              class="inline-block bg-gradient-to-r from-lime-500 to-green-500 hover:from-lime-400 hover:to-green-400 text-white font-bold py-2.5 px-6 sm:py-3 sm:px-8 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lime-500/40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-700 focus:ring-lime-500 card-clip-path text-sm sm:text-base relative overflow-hidden btn-shimmer"
               >Download Game</a
             >
-            <p class="text-xs text-neutral-500 mt-4 italic">
+            <p class="text-xs text-gray-500 mt-4 italic">
               *Requires Microsoft Visual C++ Redistributable (see "Additional
               Files").
             </p>
@@ -461,35 +461,35 @@
 
           <div
             id="Additional"
-            class="menu-content p-4 sm:p-6 bg-neutral-50/80 backdrop-filter backdrop-blur-sm rounded-md shadow-inner border border-neutral-200/60 relative overflow-hidden card-clip-path text-center"
+            class="menu-content p-4 sm:p-6 bg-neutral-700/80 backdrop-filter backdrop-blur-sm rounded-md shadow-inner border border-neutral-600/60 relative overflow-hidden card-clip-path text-center"
             style="display: none"
           >
             <div
-              class="absolute -bottom-8 -right-8 w-24 h-24 bg-sky-400/20 rounded-full filter blur-xl opacity-40 group-hover:opacity-50 transition-all duration-700 animate-pulse-glow pointer-events-none"
+              class="absolute -bottom-8 -right-8 w-24 h-24 bg-sky-500/25 rounded-full filter blur-xl opacity-40 group-hover:opacity-60 transition-all duration-700 animate-pulse-glow pointer-events-none"
             ></div>
-            <h5 class="text-lg sm:text-xl font-semibold text-neutral-800 mb-3">
-              MS VC++ Redist <span class="text-sky-600">(x64)</span>
+            <h5 class="text-lg sm:text-xl font-semibold text-white mb-3">
+              MS VC++ Redist <span class="text-sky-400">(x64)</span>
             </h5>
-            <p class="text-neutral-600 mb-4 text-xs sm:text-sm">
+            <p class="text-gray-400 mb-4 text-xs sm:text-sm">
               Essential runtime components for Visual C++ apps.
             </p>
             <a
               href="https://aka.ms/vs/17/release/vc_redist.x64.exe"
-              class="inline-block bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 text-white font-bold py-2.5 px-6 sm:py-3 sm:px-8 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-sky-500/40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-50 focus:ring-sky-500 card-clip-path text-sm sm:text-base relative overflow-hidden btn-shimmer"
+              class="inline-block bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-400 hover:to-indigo-400 text-white font-bold py-2.5 px-6 sm:py-3 sm:px-8 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-sky-500/40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-700 focus:ring-sky-500 card-clip-path text-sm sm:text-base relative overflow-hidden btn-shimmer"
               >Download VC++</a
             >
-            <p class="text-xs text-neutral-500 mt-4 italic">
+            <p class="text-xs text-gray-500 mt-4 italic">
               *If issues persist,
               <a
                 href="#where"
-                class="text-green-600 hover:text-amber-600 underline transition-colors"
+                class="text-green-400 hover:text-amber-400 underline transition-colors"
                 >contact us</a
               >.
             </p>
           </div>
         </div>
         <div
-          class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400/40 to-transparent animate-scanline"
+          class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-500/40 to-transparent animate-scanline"
           style="animation-duration: 6s; animation-direction: alternate"
         ></div>
       </section>
@@ -497,11 +497,11 @@
       <!-- Contact Section -->
       <section
         id="where"
-        class="p-4 sm:p-6 md:p-8 bg-white/90 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg border border-neutral-200/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-green-500/20"
+        class="p-4 sm:p-6 md:p-8 bg-neutral-800/85 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl border border-neutral-700/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-green-500/30"
         style="animation-delay: 0.4s"
       >
         <div
-          class="absolute -bottom-12 -left-12 w-40 h-40 bg-amber-400/20 rounded-full filter blur-2xl opacity-50 group-hover:scale-105 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
+          class="absolute -bottom-12 -left-12 w-40 h-40 bg-amber-500/25 rounded-full filter blur-2xl opacity-50 group-hover:scale-105 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
         ></div>
         <div class="max-w-3xl mx-auto px-0 sm:px-4 relative z-10">
           <h2
@@ -510,12 +510,12 @@
             Contact Us
           </h2>
           <div
-            class="fyi-box text-center mb-6 p-3 bg-yellow-100/70 border border-yellow-400/50 rounded-md card-clip-path transition-all duration-300"
+            class="fyi-box text-center mb-6 p-3 bg-yellow-500/15 border border-yellow-500/35 rounded-md card-clip-path transition-all duration-300"
           >
-            <p class="text-yellow-700 font-semibold text-sm sm:text-base">
+            <p class="text-yellow-300 font-semibold text-sm sm:text-base">
               <i class="fa fa-info-circle mr-1.5"></i>FYI!
             </p>
-            <p class="text-xs sm:text-sm text-yellow-600/90">
+            <p class="text-xs sm:text-sm text-yellow-400/80">
               Questions, feedback, or issues? We're here to help!
             </p>
           </div>
@@ -528,7 +528,7 @@
               <div>
                 <label
                   for="name"
-                  class="block text-xs font-medium text-neutral-600 mb-1 ml-1 tracking-wider"
+                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
                   >Name</label
                 >
                 <input
@@ -536,14 +536,14 @@
                   id="name"
                   name="name"
                   required
-                  class="w-full px-3 py-2.5 text-sm bg-neutral-50/85 border-2 border-neutral-300/80 rounded-md text-neutral-800 focus:ring-0 focus:border-green-500/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-400"
+                  class="w-full px-3 py-2.5 text-sm bg-neutral-700/85 border-2 border-neutral-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-green-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-500"
                   placeholder="Your Full Name"
                 />
               </div>
               <div>
                 <label
                   for="email"
-                  class="block text-xs font-medium text-neutral-600 mb-1 ml-1 tracking-wider"
+                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
                   >Email</label
                 >
                 <input
@@ -551,7 +551,7 @@
                   id="email"
                   name="email"
                   required
-                  class="w-full px-3 py-2.5 text-sm bg-neutral-50/85 border-2 border-neutral-300/80 rounded-md text-neutral-800 focus:ring-0 focus:border-green-500/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-400"
+                  class="w-full px-3 py-2.5 text-sm bg-neutral-700/85 border-2 border-neutral-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-green-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-500"
                   placeholder="you@example.tech"
                 />
               </div>
@@ -559,7 +559,7 @@
             <div>
               <label
                 for="subject"
-                class="block text-xs font-medium text-neutral-600 mb-1 ml-1 tracking-wider"
+                class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
                 >Subject</label
               >
               <input
@@ -567,14 +567,14 @@
                 id="subject"
                 name="subject"
                 required
-                class="w-full px-3 py-2.5 text-sm bg-neutral-50/85 border-2 border-neutral-300/80 rounded-md text-neutral-800 focus:ring-0 focus:border-green-500/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-400"
+                class="w-full px-3 py-2.5 text-sm bg-neutral-700/85 border-2 border-neutral-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-green-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-500"
                 placeholder="Regarding LuminArch..."
               />
             </div>
             <div>
               <label
                 for="message"
-                class="block text-xs font-medium text-neutral-600 mb-1 ml-1 tracking-wider"
+                class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
                 >Message</label
               >
               <textarea
@@ -582,7 +582,7 @@
                 name="message"
                 required
                 rows="4"
-                class="w-full px-3 py-2.5 text-sm bg-neutral-50/85 border-2 border-neutral-300/80 rounded-md text-neutral-800 focus:ring-0 focus:border-green-500/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-400 resize-none"
+                class="w-full px-3 py-2.5 text-sm bg-neutral-700/85 border-2 border-neutral-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-green-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-500 resize-none"
                 placeholder="Your detailed message..."
               ></textarea>
             </div>
@@ -597,7 +597,7 @@
           </form>
         </div>
         <div
-          class="absolute top-3 right-3 w-12 h-12 bg-gradient-to-br from-neutral-200/70 to-neutral-300/70 rounded-full opacity-40 animate-ping pointer-events-none decorative-glow-2"
+          class="absolute top-3 right-3 w-12 h-12 bg-gradient-to-br from-gray-700/70 to-gray-800/70 rounded-full opacity-40 animate-ping pointer-events-none decorative-glow-2"
           style="animation-duration: 4s"
         ></div>
       </section>
@@ -605,27 +605,27 @@
 
     <!-- Footer -->
     <footer
-      class="bg-neutral-200/85 backdrop-filter backdrop-blur-lg border-t-2 border-green-400/50 pt-10 pb-5 sm:pt-12 sm:pb-6 text-center mt-16 sm:mt-20 md:mt-24 relative overflow-hidden"
+      class="bg-neutral-950/85 backdrop-filter backdrop-blur-lg border-t-2 border-green-500/50 pt-10 pb-5 sm:pt-12 sm:pb-6 text-center mt-16 sm:mt-20 md:mt-24 relative overflow-hidden"
     >
       <div
         class="absolute inset-0 -z-10 opacity-25"
         style="
           background-image: radial-gradient(
               circle at center,
-              theme('colors.green.300 / 0.35') 0,
+              theme('colors.green.700 / 0.35') 0,
               transparent 55%
             ),
             repeating-linear-gradient(
               0deg,
-              theme('colors.amber.200 / 0.25') 0px,
-              theme('colors.amber.200 / 0.25') 1px,
+              theme('colors.amber.800 / 0.25') 0px,
+              theme('colors.amber.800 / 0.25') 1px,
               transparent 1px,
               transparent 18px
             );
         "
       ></div>
       <div class="container mx-auto relative z-10 px-4">
-        <div class="text-neutral-600 mb-5 sm:mb-6 text-xs sm:text-sm">
+        <div class="text-gray-400 mb-5 sm:mb-6 text-xs sm:text-sm">
           <span>Varlık Yücel</span>
           <span class="mx-1 sm:mx-1.5">&nbsp;&bull;&nbsp;</span>
           <span>All Rights Reserved</span>
@@ -636,7 +636,7 @@
           <a
             href="https://varlik.myportfolio.com/"
             target="_blank"
-            class="text-neutral-500 hover:text-green-600 transition-all duration-300 transform hover:scale-125 hover:rotate-[-8deg] hover:shadow-[0_0_15px_theme('colors.green.400/0.7')] group"
+            class="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[-8deg] hover:shadow-[0_0_15px_theme('colors.green.500/0.7')] group"
             aria-label="Portfolio"
           >
             <i
@@ -646,7 +646,7 @@
           <a
             href="https://github.com/varlikyucel"
             target="_blank"
-            class="text-neutral-500 hover:text-amber-600 transition-all duration-300 transform hover:scale-125 hover:rotate-[8deg] hover:shadow-[0_0_15px_theme('colors.amber.400/0.7')] group"
+            class="text-gray-400 hover:text-amber-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[8deg] hover:shadow-[0_0_15px_theme('colors.amber.500/0.7')] group"
             aria-label="GitHub"
           >
             <i
@@ -656,7 +656,7 @@
           <a
             href="https://linkedin.com/in/varlikyucel"
             target="_blank"
-            class="text-neutral-500 hover:text-green-600 transition-all duration-300 transform hover:scale-125 hover:rotate-[-5deg] hover:shadow-[0_0_15px_theme('colors.green.400/0.7')] group"
+            class="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[-5deg] hover:shadow-[0_0_15px_theme('colors.green.500/0.7')] group"
             aria-label="LinkedIn"
           >
             <i
@@ -666,7 +666,7 @@
           <a
             href="https://behance.net/varlikyucel"
             target="_blank"
-            class="text-neutral-500 hover:text-amber-600 transition-all duration-300 transform hover:scale-125 hover:rotate-[5deg] hover:shadow-[0_0_15px_theme('colors.amber.400/0.7')] group"
+            class="text-gray-400 hover:text-amber-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[5deg] hover:shadow-[0_0_15px_theme('colors.amber.500/0.7')] group"
             aria-label="Behance"
           >
             <i
@@ -676,7 +676,7 @@
         </div>
       </div>
       <div
-        class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-400/60 via-amber-500/60 to-orange-500/60 animate-scanline"
+        class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-500/60 via-amber-600/60 to-orange-600/60 animate-scanline"
         style="
           animation-duration: 7s;
           animation-direction: alternate-reverse;
@@ -709,15 +709,15 @@
         if (gameTabBg && additionalTabBg) {
           if (menuName === "Game") {
             gameTabBg.className =
-              "absolute inset-0 bg-gradient-to-br from-green-500 to-amber-600 opacity-90 group-hover/button:opacity-100 transition-opacity duration-300"; // Active gradient
+              "absolute inset-0 bg-gradient-to-br from-green-600 to-amber-700 opacity-75 group-hover/button:opacity-90 transition-opacity duration-300"; // Active gradient
             additionalTabBg.className =
-              "absolute inset-0 bg-neutral-200 opacity-90 group-hover/button:opacity-100 transition-opacity duration-300"; // Inactive light neutral
+              "absolute inset-0 bg-gray-700 opacity-75 group-hover/button:opacity-90 transition-opacity duration-300"; // Inactive gray
           } else {
             // 'Additional' is selected
             gameTabBg.className =
-              "absolute inset-0 bg-neutral-200 opacity-90 group-hover/button:opacity-100 transition-opacity duration-300"; // Inactive light neutral
+              "absolute inset-0 bg-gray-700 opacity-75 group-hover/button:opacity-90 transition-opacity duration-300"; // Inactive gray
             additionalTabBg.className =
-              "absolute inset-0 bg-gradient-to-br from-green-500 to-amber-600 opacity-90 group-hover/button:opacity-100 transition-opacity duration-300"; // Active gradient
+              "absolute inset-0 bg-gradient-to-br from-green-600 to-amber-700 opacity-75 group-hover/button:opacity-90 transition-opacity duration-300"; // Active gradient
           }
         }
 
@@ -894,14 +894,14 @@
       @keyframes pulse-glow {
         0%,
         100% {
-          box-shadow: 0 0 5px theme("colors.green.400"),
-            0 0 10px theme("colors.green.500"); /* Adjusted for light theme */
-          opacity: 0.6;
+          box-shadow: 0 0 5px theme("colors.green.500"),
+            0 0 10px theme("colors.green.600");
+          opacity: 0.8;
         }
         50% {
-          box-shadow: 0 0 15px theme("colors.green.300"),
-            0 0 25px theme("colors.green.400");
-          opacity: 0.8;
+          box-shadow: 0 0 15px theme("colors.green.400"),
+            0 0 25px theme("colors.green.500");
+          opacity: 1;
         }
       }
       .animate-pulse-glow {
@@ -936,13 +936,13 @@
         background-size: 300% 300%;
         background-image: linear-gradient(
           -45deg,
-          theme("colors.neutral.100") 0%,
-          /* Lightest Neutral */ theme("colors.green.200") 25%,
-          theme("colors.amber.200") 50%,
-          theme("colors.amber.100") 75%,
-          theme("colors.neutral.100") 100% /* Lightest Neutral */
+          theme("colors.green.950") 0%,
+          /* Darkest Green */ theme("colors.green.800") 25%,
+          theme("colors.amber.800") 50%,
+          theme("colors.amber.900") 75%,
+          theme("colors.green.950") 100% /* Darkest Green */
         );
-        animation: futuristic-bg 25s ease infinite; /* Slower animation? */
+        animation: futuristic-bg 15s ease infinite;
       }
 
       @keyframes text-focus-in {
@@ -970,27 +970,23 @@
       }
 
       .input-tech-focus:focus {
-        border-color: theme(
-          "colors.green.500"
-        ); /* Keep focus border distinct */
-        box-shadow: 0 0 10px theme("colors.green.300 / 0.5"),
-          /* Lighter glow */ inset 0 0 4px theme("colors.amber.300 / 0.3");
+        border-color: theme("colors.green.400");
+        box-shadow: 0 0 15px theme("colors.green.500 / 0.5"),
+          inset 0 0 5px theme("colors.amber.600 / 0.3");
       }
 
       @keyframes border-pulse {
         0% {
-          border-color: theme(
-            "colors.green.300 / 0.5"
-          ); /* Lighter border pulse */
-          box-shadow: 0 0 6px theme("colors.green.200 / 0.3");
+          border-color: theme("colors.green.500 / 0.5");
+          box-shadow: 0 0 8px theme("colors.green.500 / 0.3");
         }
         50% {
-          border-color: theme("colors.amber.300 / 0.7");
-          box-shadow: 0 0 12px theme("colors.amber.200 / 0.5");
+          border-color: theme("colors.amber.500 / 0.7");
+          box-shadow: 0 0 16px theme("colors.amber.500 / 0.5");
         }
         100% {
-          border-color: theme("colors.green.300 / 0.5");
-          box-shadow: 0 0 6px theme("colors.green.200 / 0.3");
+          border-color: theme("colors.green.500 / 0.5");
+          box-shadow: 0 0 8px theme("colors.green.500 / 0.3");
         }
       }
       .group:hover .border-animated-pulse {
@@ -1021,7 +1017,7 @@
         transform: skewX(-25deg);
         pointer-events: none;
       }
-      .group/button:hover .btn-shimmer::before,
+      .group\/button:hover .btn-shimmer::before,
       .btn-shimmer-active::before {
         animation: shimmer 1s infinite linear;
         /* For one-shot on hover: animation: shimmer 0.7s forwards; */
@@ -1046,12 +1042,12 @@
         width: 100%;
         height: 100%;
         background-image: linear-gradient(
-            theme("colors.neutral.300 / 0.05") 1px,
+            theme("colors.amber.900 / 0.04") 1px,
             transparent 1px
           ),
           linear-gradient(
             90deg,
-            theme("colors.neutral.300 / 0.05") 1px,
+            theme("colors.amber.900 / 0.04") 1px,
             transparent 1px
           );
         background-size: 25px 25px; /* Grid size - slightly larger? */
@@ -1108,17 +1104,12 @@
 
       /* Keep this rule for the selected state (border/text/lift) */
       .active-tab-button {
-        border-color: theme(
-          "colors.green.500 / 0.9"
-        ) !important; /* Active tab border */
+        border-color: theme("colors.green.500 / 0.9") !important;
         transform: translateY(-2px);
-        /* Background is handled by the span now */
       }
-      .active-tab-button span.relative.z-10 {
+      .active-tab-button .relative.z-10 {
         /* Target the text span */
-        color: theme(
-          "colors.white"
-        ) !important; /* White text on active gradient */
+        color: theme("colors.yellow.300") !important;
       }
 
       /* Custom spin animation with slower speed */
