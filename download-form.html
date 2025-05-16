@@ -387,16 +387,15 @@
           }
 
           // You might want to send this data to a server using fetch() here
-          /*
-          fetch('/your-server-endpoint', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ name, email, affiliation })
+
+          fetch("https://formspree.io/f/xkgjeqwd", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, affiliation }),
           })
-          .then(response => response.json())
-          .then(data => console.log('Server Response:', data))
-          .catch(error => console.error('Error sending data:', error));
-          */
+            .then((response) => response.json())
+            .then((data) => console.log("Server Response:", data))
+            .catch((error) => console.error("Error sending data:", error));
         });
       } else {
         console.error(
