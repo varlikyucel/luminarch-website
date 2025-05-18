@@ -4,7 +4,7 @@
     <title>Download LuminArch</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#15803d" />
+    <meta name="theme-color" content="#F59E0B" />
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -28,9 +28,11 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700;900&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Inconsolata"
     />
     <link
       rel="stylesheet"
@@ -38,61 +40,44 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body
-    class="bg-neutral-900 text-gray-100 font-sans antialiased pt-14 bg-futuristic-animated bg-animated-grid"
-  >
+  <body class="bg-orange-50 text-neutral-700 font-sans antialiased pt-14">
     <!-- Links (sit on top) -->
     <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-gray-950 text-white shadow-2xl backdrop-filter backdrop-blur-lg bg-opacity-85 border-b border-green-500/40"
+      class="fixed top-0 left-0 right-0 z-50 bg-stone-800 text-stone-300 shadow-lg border-b border-amber-600"
     >
       <div
         class="container mx-auto px-4 sm:px-6 py-2.5 flex justify-between items-center"
       >
         <a
           href="index.html"
-          class="text-xl md:text-2xl font-black text-green-400 hover:text-amber-400 transition-colors duration-300 relative group tracking-tighter"
+          class="text-2xl md:text-3xl font-extrabold text-amber-400 hover:text-amber-300 transition-colors duration-300 tracking-tight"
         >
           LUMINARCH
-          <span
-            class="absolute bottom-[-2px] left-0 w-full h-0.5 bg-gradient-to-r from-green-400 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-400 ease-out origin-left"
-          ></span>
         </a>
         <div class="space-x-0.5 sm:space-x-1">
           <a
             href="index.html"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-3.5 py-2.5 rounded-md text-xs sm:text-sm font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-all duration-200 ease-in-out"
           >
             HOME
-            <span
-              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-amber-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
-            ></span>
           </a>
           <a
             href="index.html#about"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-3.5 py-2.5 rounded-md text-xs sm:text-sm font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-all duration-200 ease-in-out"
           >
             ABOUT
-            <span
-              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-amber-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
-            ></span>
           </a>
           <a
             href="index.html#menu"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-3.5 py-2.5 rounded-md text-xs sm:text-sm font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-all duration-200 ease-in-out"
           >
             DOWNLOAD
-            <span
-              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-amber-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
-            ></span>
           </a>
           <a
             href="index.html#where"
-            class="px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-md text-xs sm:text-sm font-medium text-gray-300 hover:text-white hover:bg-green-600/70 active:bg-green-700 transition-all duration-200 ease-in-out relative group hover-subtle-float"
+            class="px-3.5 py-2.5 rounded-md text-xs sm:text-sm font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-all duration-200 ease-in-out"
           >
             CONTACT
-            <span
-              class="absolute -bottom-0.5 left-1/2 w-0 h-[2.5px] bg-amber-500 group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"
-            ></span>
           </a>
         </div>
       </div>
@@ -106,27 +91,27 @@
       <!-- Download Form Section -->
       <section
         id="download-form-section"
-        class="w-full max-w-xl p-4 sm:p-6 md:p-8 bg-neutral-800/85 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl border border-neutral-700/80 border-animated-pulse relative overflow-hidden card-clip-path transition-all duration-500 group animate-text-focus-in hover:shadow-green-500/30"
+        class="w-full max-w-xl p-4 sm:p-6 md:p-8 bg-white rounded-xl shadow-lg border border-stone-300 transition-all duration-500 group"
         style="animation-delay: 0.1s"
       >
-        <div
-          class="absolute -bottom-12 -right-12 w-40 h-40 bg-green-500/20 rounded-full filter blur-2xl opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700 animate-pulse-glow pointer-events-none decorative-glow-1"
-        ></div>
         <div class="relative z-10">
           <h2
-            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 tracking-tight bg-gradient-to-r from-green-400 via-lime-400 to-yellow-500 text-transparent bg-clip-text text-center"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 tracking-tight text-center text-stone-800"
           >
-            Complete Your Download
+            <span
+              class="bg-yellow-400 text-black px-3 py-1 rounded-sm inline-block"
+              >Complete Your Download</span
+            >
           </h2>
 
           <!-- Form Intro Text -->
           <div
-            class="fyi-box text-center mb-6 p-3 bg-green-600/10 border border-green-600/30 rounded-md card-clip-path transition-all duration-300"
+            class="fyi-box text-center mb-6 p-3 bg-amber-100 border border-amber-300 rounded-md transition-all duration-300"
           >
-            <p class="text-green-400 font-semibold text-sm sm:text-base">
+            <p class="text-amber-700 font-semibold text-sm sm:text-base">
               <i class="fa fa-info-circle mr-1.5"></i> Info
             </p>
-            <p class="text-xs sm:text-sm text-green-300/80">
+            <p class="text-xs sm:text-sm text-amber-600">
               Fill out this form to access the LuminArch game download.
             </p>
           </div>
@@ -134,7 +119,7 @@
           <!-- Quick Installation Steps Visual Guide (Visible on initial form load) -->
           <div class="my-6 relative z-10">
             <h5
-              class="text-md font-semibold text-green-300 mb-4 text-left sm:text-center"
+              class="text-md font-semibold text-stone-800 mb-4 text-left sm:text-center"
             >
               Quick Installation Steps:
             </h5>
@@ -144,37 +129,37 @@
               <!-- Step 1: Download -->
               <div class="flex-1 mb-4 md:mb-0">
                 <div class="flex justify-center items-center mb-2">
-                  <i class="fa fa-file-archive-o fa-2x text-lime-400"></i>
+                  <i class="fa fa-file-archive-o fa-2x text-yellow-600"></i>
                 </div>
-                <p class="text-xs text-gray-300 px-1">1. Download the ZIP</p>
+                <p class="text-xs text-stone-600 px-1">1. Download the ZIP</p>
               </div>
 
               <!-- Connector 1 -->
               <div class="hidden md:flex items-center self-center mx-1">
-                <i class="fa fa-arrow-right fa-lg text-gray-500"></i>
+                <i class="fa fa-arrow-right fa-lg text-stone-400"></i>
               </div>
-              <hr class="md:hidden w-1/2 border-gray-600 my-2 mx-auto" />
+              <hr class="md:hidden w-1/2 border-stone-300 my-2 mx-auto" />
 
               <!-- Step 2: Unzip -->
               <div class="flex-1 mb-4 md:mb-0">
                 <div class="flex justify-center items-center mb-2">
-                  <i class="fa fa-folder-open-o fa-2x text-amber-400"></i>
+                  <i class="fa fa-folder-open-o fa-2x text-yellow-600"></i>
                 </div>
-                <p class="text-xs text-gray-300 px-1">2. Unzip the file</p>
+                <p class="text-xs text-stone-600 px-1">2. Unzip the file</p>
               </div>
 
               <!-- Connector 2 -->
               <div class="hidden md:flex items-center self-center mx-1">
-                <i class="fa fa-arrow-right fa-lg text-gray-500"></i>
+                <i class="fa fa-arrow-right fa-lg text-stone-400"></i>
               </div>
-              <hr class="md:hidden w-1/2 border-gray-600 my-2 mx-auto" />
+              <hr class="md:hidden w-1/2 border-stone-300 my-2 mx-auto" />
 
               <!-- Step 3: Run -->
               <div class="flex-1">
                 <div class="flex justify-center items-center mb-2">
-                  <i class="fa fa-play-circle-o fa-2x text-green-400"></i>
+                  <i class="fa fa-play-circle-o fa-2x text-yellow-600"></i>
                 </div>
-                <p class="text-xs text-gray-300 px-1">3. Run LuminArch.exe</p>
+                <p class="text-xs text-stone-600 px-1">3. Run LuminArch.exe</p>
               </div>
             </div>
           </div>
@@ -185,7 +170,7 @@
               <div>
                 <label
                   for="name"
-                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
+                  class="block text-xs font-medium text-stone-600 mb-1 ml-1 tracking-wider"
                   >Full Name</label
                 >
                 <input
@@ -193,14 +178,14 @@
                   id="name"
                   name="name"
                   required
-                  class="w-full px-3 py-2.5 text-sm bg-neutral-700/85 border-2 border-neutral-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-green-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-500"
+                  class="w-full px-3 py-2.5 text-sm bg-stone-50 border-2 border-stone-300 rounded-md text-stone-700 focus:ring-0 focus:border-yellow-500 outline-none transition-all duration-300 placeholder-stone-400"
                   placeholder="Your Full Name"
                 />
               </div>
               <div>
                 <label
                   for="email"
-                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
+                  class="block text-xs font-medium text-stone-600 mb-1 ml-1 tracking-wider"
                   >Email Address</label
                 >
                 <input
@@ -208,14 +193,14 @@
                   id="email"
                   name="email"
                   required
-                  class="w-full px-3 py-2.5 text-sm bg-neutral-700/85 border-2 border-neutral-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-green-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-500"
+                  class="w-full px-3 py-2.5 text-sm bg-stone-50 border-2 border-stone-300 rounded-md text-stone-700 focus:ring-0 focus:border-yellow-500 outline-none transition-all duration-300 placeholder-stone-400"
                   placeholder="you@example.com"
                 />
               </div>
               <div>
                 <label
                   for="affiliation"
-                  class="block text-xs font-medium text-gray-300 mb-1 ml-1 tracking-wider"
+                  class="block text-xs font-medium text-stone-600 mb-1 ml-1 tracking-wider"
                   >School/Company</label
                 >
                 <input
@@ -223,7 +208,7 @@
                   id="affiliation"
                   name="affiliation"
                   required
-                  class="w-full px-3 py-2.5 text-sm bg-neutral-700/85 border-2 border-neutral-600/80 rounded-md text-gray-200 focus:ring-0 focus:border-green-400/80 outline-none transition-all duration-300 input-tech-focus card-clip-path placeholder-neutral-500"
+                  class="w-full px-3 py-2.5 text-sm bg-stone-50 border-2 border-stone-300 rounded-md text-stone-700 focus:ring-0 focus:border-yellow-500 outline-none transition-all duration-300 placeholder-stone-400"
                   placeholder="Your Affiliation"
                 />
               </div>
@@ -231,7 +216,7 @@
                 <button
                   type="submit"
                   id="submit-btn"
-                  class="inline-block w-full sm:w-auto bg-gradient-to-r from-lime-500 to-green-500 hover:from-lime-400 hover:to-green-400 text-white font-bold py-3 px-10 text-sm sm:text-base rounded-md shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lime-500/40 focus:outline-none focus:ring-4 focus:ring-lime-500/50 card-clip-path active:scale-95 relative overflow-hidden btn-shimmer"
+                  class="inline-block w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-10 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-white active:scale-95 active:bg-yellow-700 text-sm sm:text-base"
                 >
                   Submit & Download <i class="fa fa-download ml-1.5"></i>
                 </button>
@@ -242,90 +227,44 @@
           <!-- Success Section (initially hidden) -->
           <div
             id="download-success"
-            class="mt-8 p-4 sm:p-6 bg-green-900/50 border border-green-500/50 rounded-md shadow-lg card-clip-path relative overflow-hidden text-center"
+            class="mt-8 p-4 sm:p-6 bg-amber-50 border border-amber-300 rounded-md shadow-md text-center"
             style="display: none"
           >
-            <div
-              class="absolute -top-8 -right-8 w-24 h-24 bg-green-500/25 rounded-full filter blur-xl opacity-50 pointer-events-none"
-            ></div>
             <h4
-              class="text-lg sm:text-xl font-semibold text-green-300 mb-3 relative z-10"
+              class="text-lg sm:text-xl font-semibold text-stone-800 mb-3 relative z-10"
             >
               Thank You!
             </h4>
-            <p class="text-sm sm:text-base text-gray-300 mb-4 relative z-10">
+            <p class="text-sm sm:text-base text-stone-600 mb-4 relative z-10">
               Your download should begin shortly. If not, use the link below.
             </p>
-            <p class="text-sm sm:text-base text-gray-300 mb-4 relative z-10">
-              After downloading, please unzip the file and run LuminArch.exe to
-              start the application.
-            </p>
-
+            <!-- Quick Installation Steps Visual Guide (This instance was removed in a previous step, ensure it stays removed from here) -->
+            <!-- Ensure the actual download link here -->
             <p class="mb-4 relative z-10">
               <a
-                id="direct-download-link"
                 href="https://github.com/varlikyucel/luminarch-website/releases/download/LuminArch-Release2/LuminArch.zip"
-                class="inline-block bg-gradient-to-r from-lime-500 to-green-500 hover:from-lime-400 hover:to-green-400 text-white font-bold py-2 px-5 rounded-md shadow-md transition-all duration-300 transform hover:scale-105 card-clip-path text-xs sm:text-sm btn-shimmer relative overflow-hidden"
+                id="download-link-success"
+                class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-amber-50 active:scale-95 active:bg-yellow-700"
+                download="LuminArch_Game.zip"
               >
-                Manual Download Link
-                <i class="fa fa-external-link-alt ml-1"></i>
+                <i class="fa fa-download mr-1.5"></i> Download LuminArch Game
+                (ZIP)
               </a>
             </p>
-            <!-- Password section commented out
-            <div
-              class="fyi-box p-3 bg-neutral-700/50 border-l-4 border-green-400 rounded-md text-left mb-4 relative z-10"
-            >
-              <p class="text-xs sm:text-sm text-gray-300 mb-1">
-                <i class="fa fa-key mr-1.5 text-green-400"></i
-                ><strong>Installation Password:</strong>
-              </p>
-              <p
-                class="text-center font-mono text-lg sm:text-xl text-yellow-300 tracking-widest bg-gray-900/50 py-1 rounded"
-              >
-                ITU2025LA
-              </p>
-            </div>
-            -->
-            <p class="mt-6 relative z-10">
-              <a
-                href="index.html"
-                class="inline-block bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-6 rounded-md shadow transition-colors duration-300 text-sm card-clip-path btn-shimmer relative overflow-hidden"
-              >
-                Return to Homepage <i class="fa fa-home ml-1.5"></i>
-              </a>
+            <p class="text-xs text-stone-500 mt-3 relative z-10">
+              If you encounter any issues, please contact us via the main page.
             </p>
           </div>
         </div>
-        <div
-          class="absolute top-3 right-3 w-12 h-12 bg-gradient-to-br from-gray-700/70 to-gray-800/70 rounded-full opacity-40 animate-ping pointer-events-none decorative-glow-2"
-          style="animation-duration: 5s"
-        ></div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer
-      class="bg-neutral-950/85 backdrop-filter backdrop-blur-lg border-t-2 border-green-500/50 pt-10 pb-5 sm:pt-12 sm:pb-6 text-center mt-auto relative overflow-hidden"
+      class="bg-stone-800 border-t border-stone-700 pt-10 pb-5 sm:pt-12 sm:pb-6 text-center mt-auto relative"
     >
-      <div
-        class="absolute inset-0 -z-10 opacity-25"
-        style="
-          background-image: radial-gradient(
-              circle at center,
-              theme('colors.green.700 / 0.35') 0,
-              transparent 55%
-            ),
-            repeating-linear-gradient(
-              0deg,
-              theme('colors.amber.800 / 0.25') 0px,
-              theme('colors.amber.800 / 0.25') 1px,
-              transparent 1px,
-              transparent 18px
-            );
-        "
-      ></div>
       <div class="container mx-auto relative z-10 px-4">
-        <div class="text-gray-400 mb-5 sm:mb-6 text-xs sm:text-sm">
+        <div class="text-stone-300 mb-5 sm:mb-6 text-xs sm:text-sm">
           <span>Varlık Yücel</span>
           <span class="mx-1 sm:mx-1.5">&nbsp;&bull;&nbsp;</span>
           <span>All Rights Reserved</span>
@@ -336,53 +275,37 @@
           <a
             href="https://varlik.myportfolio.com/"
             target="_blank"
-            class="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[-8deg] hover:shadow-[0_0_15px_theme('colors.green.500/0.7')] group"
+            class="text-stone-300 hover:text-amber-400 transition-all duration-300 transform hover:scale-110"
             aria-label="Portfolio"
           >
-            <i
-              class="fa fa-globe fa-md sm:fa-lg group-hover:animate-pulse-glow"
-            ></i>
+            <i class="fa fa-globe fa-md sm:fa-lg"></i>
           </a>
           <a
             href="https://github.com/varlikyucel"
             target="_blank"
-            class="text-gray-400 hover:text-amber-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[8deg] hover:shadow-[0_0_15px_theme('colors.amber.500/0.7')] group"
+            class="text-stone-300 hover:text-amber-400 transition-all duration-300 transform hover:scale-110"
             aria-label="GitHub"
           >
-            <i
-              class="fa fa-github fa-md sm:fa-lg group-hover:animate-pulse-glow"
-            ></i>
+            <i class="fa fa-github fa-md sm:fa-lg"></i>
           </a>
           <a
             href="https://linkedin.com/in/varlikyucel"
             target="_blank"
-            class="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[-5deg] hover:shadow-[0_0_15px_theme('colors.green.500/0.7')] group"
+            class="text-stone-300 hover:text-amber-400 transition-all duration-300 transform hover:scale-110"
             aria-label="LinkedIn"
           >
-            <i
-              class="fa fa-linkedin fa-md sm:fa-lg group-hover:animate-pulse-glow"
-            ></i>
+            <i class="fa fa-linkedin fa-md sm:fa-lg"></i>
           </a>
           <a
             href="https://behance.net/varlikyucel"
             target="_blank"
-            class="text-gray-400 hover:text-amber-400 transition-all duration-300 transform hover:scale-125 hover:rotate-[5deg] hover:shadow-[0_0_15px_theme('colors.amber.500/0.7')] group"
+            class="text-stone-300 hover:text-amber-400 transition-all duration-300 transform hover:scale-110"
             aria-label="Behance"
           >
-            <i
-              class="fa fa-behance fa-md sm:fa-lg group-hover:animate-pulse-glow"
-            ></i>
+            <i class="fa fa-behance fa-md sm:fa-lg"></i>
           </a>
         </div>
       </div>
-      <div
-        class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-500/60 via-amber-600/60 to-orange-600/60 animate-scanline"
-        style="
-          animation-duration: 7s;
-          animation-direction: alternate-reverse;
-          filter: blur(2.5px);
-        "
-      ></div>
     </footer>
 
     <script>
@@ -427,7 +350,7 @@
           successSection.classList.add("animate-text-focus-in"); // Add entrance animation
 
           // Trigger download (optional, might happen server-side)
-          const downloadLink = document.getElementById("direct-download-link");
+          const downloadLink = document.getElementById("download-link-success");
           if (downloadLink) {
             // window.location.href = downloadLink.href; // Redirect to download
             // Or simulate click if direct download is desired on form submit
@@ -532,7 +455,7 @@
       .animate-text-focus-in {
         animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       }
-      .card-clip-path {
+      /* .card-clip-path {
         clip-path: polygon(
           0 0,
           100% 0,
@@ -540,7 +463,7 @@
           calc(100% - 20px) 100%,
           0 100%
         );
-      }
+      } */
       .input-tech-focus:focus {
         border-color: theme("colors.green.400");
         box-shadow: 0 0 15px theme("colors.green.500 / 0.5"),
