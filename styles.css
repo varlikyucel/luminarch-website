@@ -4,6 +4,26 @@ html {
   font-family: "Urbanist", sans-serif;
 }
 
+/* Apply Saira Stencil One to specific titles */
+/* For the main H1 in the header */
+header h1.text-yellow-500 {
+  /* Targeting the specific LUMINARCH header title */
+  font-family: "Saira Stencil One", "Urbanist", sans-serif;
+}
+
+/* For the H2 section titles */
+section h2 {
+  font-family: "Saira Stencil One", "Urbanist", sans-serif;
+  letter-spacing: 0.1em; /* Adjust this value as needed */
+}
+
+/* For the LUMINARCH text in the navbar */
+nav a.text-amber-400[href="index.html"] {
+  font-family: "Saira Stencil One", "Urbanist", sans-serif;
+  /* You might want to adjust letter-spacing here too if needed */
+  /* letter-spacing: 0.05em; */
+}
+
 /* Ensure responsive behavior on all devices */
 @media only screen and (max-width: 768px) {
   /* Styles for smaller screens can go here if needed, 
