@@ -14,7 +14,7 @@ header h1.text-yellow-500 {
 /* For the H2 section titles */
 section h2 {
   font-family: "Saira Stencil One", "Urbanist", sans-serif;
-  letter-spacing: 0.1em; /* Adjust this value as needed */
+  letter-spacing: 0.02em; /* Adjust this value as needed */
 }
 
 /* For the LUMINARCH text in the navbar */
