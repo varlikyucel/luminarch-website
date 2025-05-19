@@ -54,7 +54,12 @@
         >
           LUMINARCH
         </a>
-        <div class="space-x-0.5 sm:space-x-1">
+
+        <!-- Desktop Links (Hidden on Mobile) -->
+        <div
+          id="nav-links-desktop"
+          class="hidden md:flex space-x-0.5 sm:space-x-1"
+        >
           <a
             href="index.html"
             class="px-3.5 py-2.5 rounded-md text-xs sm:text-sm font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-all duration-200 ease-in-out"
@@ -79,6 +84,76 @@
           >
             CONTACT
           </a>
+        </div>
+
+        <!-- Mobile Menu Button (Hidden on Desktop) -->
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-stone-300 hover:text-amber-400 focus:text-amber-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500 p-2 rounded-md transition-colors duration-200"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              id="icon-hamburger"
+              class="h-6 w-6 block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+            <!-- Close Icon (Initially Hidden) -->
+            <svg
+              id="icon-close"
+              class="h-6 w-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Links (Hidden Initially, shown on toggle) -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-stone-800 border-t border-stone-700"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="block px-3 py-2 rounded-md text-base font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-colors duration-200"
+            >HOME</a
+          >
+          <a
+            href="index.html#about"
+            class="block px-3 py-2 rounded-md text-base font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-colors duration-200"
+            >ABOUT</a
+          >
+          <a
+            href="index.html#menu"
+            class="block px-3 py-2 rounded-md text-base font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-colors duration-200"
+            >DOWNLOAD</a
+          >
+          <a
+            href="index.html#where"
+            class="block px-3 py-2 rounded-md text-base font-semibold text-stone-300 hover:text-amber-400 hover:bg-stone-700 focus:bg-stone-700 focus:text-amber-400 active:bg-stone-600 transition-colors duration-200"
+            >CONTACT</a
+          >
         </div>
       </div>
     </nav>
@@ -314,6 +389,62 @@
         document.getElementById("current-year").innerHTML =
           new Date().getFullYear();
       }
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconHamburger = document.getElementById("icon-hamburger");
+      const iconClose = document.getElementById("icon-close");
+
+      if (mobileMenuButton && mobileMenu && iconHamburger && iconClose) {
+        mobileMenuButton.addEventListener("click", () => {
+          // mobileMenu.classList.toggle('hidden') returns true if 'hidden' was ADDED (menu is now closed),
+          // and false if 'hidden' was REMOVED (menu is now open).
+          const menuIsNowClosed = mobileMenu.classList.toggle("hidden");
+          const menuIsOpen = !menuIsNowClosed;
+
+          mobileMenuButton.setAttribute("aria-expanded", menuIsOpen);
+
+          // If menu is open: Hamburger should be hidden, Close should be visible.
+          // If menu is closed: Hamburger should be visible, Close should be hidden.
+          iconHamburger.classList.toggle("hidden", menuIsOpen);
+          iconHamburger.classList.toggle("block", !menuIsOpen); // Or menuIsNowClosed
+
+          iconClose.classList.toggle("hidden", !menuIsOpen); // Or menuIsNowClosed
+          iconClose.classList.toggle("block", menuIsOpen);
+        });
+      }
+
+      // Close mobile menu when a link is clicked (optional but good UX)
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+            iconHamburger.classList.remove("hidden");
+            iconHamburger.classList.add("block");
+            iconClose.classList.add("hidden");
+            iconClose.classList.remove("block");
+          }
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (event) => {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnButton = mobileMenuButton.contains(event.target);
+        const isMenuOpen = !mobileMenu.classList.contains("hidden");
+
+        if (isMenuOpen && !isClickInsideMenu && !isClickOnButton) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.setAttribute("aria-expanded", "false");
+          iconHamburger.classList.remove("hidden");
+          iconHamburger.classList.add("block");
+          iconClose.classList.add("hidden");
+          iconClose.classList.remove("block");
+        }
+      });
 
       // Original Form submission handler (keep this logic)
       const downloadForm = document.getElementById("download-form");

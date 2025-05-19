@@ -710,44 +710,56 @@
       // Tabbed Menu
       function openMenu(evt, menuName) {
         let i, menuContents, tablinks;
-        // Define classes for active and inactive states
-        const activeClasses = [
-          "bg-yellow-500",
-          "text-black",
-          "font-semibold",
-          "focus:ring-yellow-500",
-        ];
-        const inactiveClasses = [
+
+        // Get all menu content panels and tablinks
+        menuContents = document.getElementsByClassName("menu-content");
+        tablinks = document.getElementsByClassName("tablink-new");
+
+        // Hide all menu content panels with fade out
+        for (i = 0; i < menuContents.length; i++) {
+          menuContents[i].style.opacity = "0";
+          menuContents[i].style.display = "none";
+        }
+
+        // Reset all tablinks to inactive state
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove(
+            "bg-yellow-500",
+            "text-black",
+            "font-semibold",
+            "focus:ring-yellow-500"
+          );
+          tablinks[i].classList.add(
+            "bg-stone-100",
+            "text-stone-700",
+            "hover:bg-amber-100",
+            "font-medium",
+            "focus:ring-amber-500"
+          );
+        }
+
+        // Activate the current tablink
+        evt.currentTarget.classList.remove(
           "bg-stone-100",
           "text-stone-700",
           "hover:bg-amber-100",
           "font-medium",
-          "focus:ring-amber-500",
-        ];
+          "focus:ring-amber-500"
+        );
+        evt.currentTarget.classList.add(
+          "bg-yellow-500",
+          "text-black",
+          "font-semibold",
+          "focus:ring-yellow-500"
+        );
 
-        // Hide all menu content panels and remove animation class
-        menuContents = document.getElementsByClassName("menu-content");
-        for (i = 0; i < menuContents.length; i++) {
-          menuContents[i].style.display = "none";
-          menuContents[i].classList.remove("animate-text-focus-in");
-        }
-
-        // Reset all tablinks to inactive state
-        tablinks = document.getElementsByClassName("tablink-new");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].classList.remove(...activeClasses);
-          tablinks[i].classList.add(...inactiveClasses);
-        }
-
-        // Activate the current tablink
-        evt.currentTarget.classList.remove(...inactiveClasses);
-        evt.currentTarget.classList.add(...activeClasses);
-
-        // Show the current tab content and add animation
+        // Show the current tab content with fade in
         let activeMenu = document.getElementById(menuName);
         if (activeMenu) {
           activeMenu.style.display = "block";
-          activeMenu.classList.add("animate-text-focus-in");
+          // Trigger reflow
+          activeMenu.offsetHeight;
+          activeMenu.style.opacity = "1";
         }
       }
 
@@ -893,6 +905,16 @@
     </script>
 
     <style>
+      /* Add these new styles at the beginning of your style section */
+      .menu-content {
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+      }
+
+      .menu-content[style*="display: block"] {
+        opacity: 1;
+      }
+
       @keyframes scanline {
         0% {
           transform: translateX(-100%);
