@@ -909,6 +909,11 @@
       .menu-content {
         transition: opacity 0.3s ease-in-out;
         opacity: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        will-change: opacity;
       }
 
       .menu-content[style*="display: block"] {
