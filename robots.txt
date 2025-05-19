@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cymatfiy.app/sitemap.xml
+Sitemap: https://luminarch.app/sitemap.xml

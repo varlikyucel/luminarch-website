@@ -1,12 +1,12 @@
         <?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
-            <loc>https://cymatify.app/index.html</loc>
+            <loc>https://luminarch.app/index.html</loc>
             <lastmod>2023-10-27</lastmod> <!-- Change to the date you last updated index.html -->
             <priority>1.00</priority>
           </url>
           <url>
-            <loc>https://cymatify.app/download-form.html</loc>
+            <loc>https://luminarch.app/download-form.html</loc>
             <lastmod>2023-10-27</lastmod> <!-- Change to the date you last updated download-form.html -->
             <priority>0.80</priority>
           </url>
